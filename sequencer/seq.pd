@@ -1,4 +1,4 @@
-#N canvas 274 109 1403 789 10;
+#N canvas 276 103 1403 789 10;
 #X msg 712 527 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
@@ -68,10 +68,16 @@ read, f 65;
 #X obj 789 191 t b b b;
 #X obj 865 188 t b b b;
 #X obj 712 555 text define -k \$1;
-#A set 0 length 1379 \; 0 note 60 100 \; 149 note 60 0 \; 284 note
-72 100 \; 374 note 72 0 \; 539 note 69 100 \; 644 note 69 0 \; 704
-note 67 100 \; 869 note 67 0 \; 974 note 62 100 \; 1139 note 62 0 \;
-1229 note 65 100 \; 1319 note 65 0 \;;
+#A set 0 length 1049 \; 0 note 74 100 \; 64 note 72 100 \; 72 note
+74 0 \; 98 note 72 0 \; 104 note 71 100 \; 146 note 69 100 \; 147 note
+71 0 \; 200 note 67 100 \; 213 note 69 0 \; 218 note 69 100 \; 235
+note 60 100 \; 254 note 67 0 \; 289 note 69 0 \; 306 note 71 100 \;
+314 note 74 100 \; 328 note 60 0 \; 367 note 71 0 \; 372 note 60 100
+\; 412 note 65 100 \; 428 note 64 100 \; 449 note 74 0 \; 464 note
+60 0 \; 479 note 64 0 \; 510 note 67 100 \; 511 note 65 0 \; 534 note
+69 100 \; 535 note 67 0 \; 554 note 76 100 \; 640 note 69 0 \; 704
+note 76 0 \; 722 note 68 100 \; 764 note 77 100 \; 786 note 68 0 \;
+869 note 77 0 \; 899 note 79 100 \; 1034 note 79 0 \;;
 #X connect 0 0 50 0;
 #X connect 1 0 23 0;
 #X connect 2 0 23 0;
