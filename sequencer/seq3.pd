@@ -1,4 +1,4 @@
-#N canvas 198 82 1004 697 10;
+#N canvas 199 79 1004 697 10;
 #N canvas 13 50 476 382 latch 0;
 #X text 191 93 THE LATCH!;
 #X msg 232 200 1;
@@ -745,7 +745,7 @@ change to .txt than dont save;
 #X restore 560 94 pd change-and-load-slot;
 #X text 409 150 arg 1: unique number to match to Shortcuts;
 #X text 408 189 arg 3: path to folder where to save 28 textfiles;
-#N canvas 34 50 1159 834 THE-2-SEQS 0;
+#N canvas 35 50 1159 834 THE-2-SEQS 0;
 #X obj 398 800 outlet;
 #N canvas 14 50 468 388 flush-stuck-notes 0;
 #X obj 167 212 bag;
