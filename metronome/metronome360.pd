@@ -1,4 +1,4 @@
-#N canvas 4 50 450 300 10;
+#N canvas 8 50 450 300 10;
 #N canvas 27 50 815 554 LINK 0;
 #X msg 355 126 tempo \$1;
 #X msg 144 127 resolution \$1;
@@ -61,8 +61,10 @@
 #X obj 149 79 moses 10;
 #X obj 153 16 inlet;
 #X obj 158 233 outlet;
+#X obj 297 207 outlet;
 #X connect 0 0 2 0;
 #X connect 0 1 1 0;
+#X connect 1 0 8 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 7 0;
