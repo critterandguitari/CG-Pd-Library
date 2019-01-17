@@ -1,4 +1,4 @@
-#N canvas 224 50 1534 925 10;
+#N canvas 229 50 1534 925 10;
 #X obj 91 861 outlet;
 #N canvas 11 50 867 431 latch 0;
 #X text 482 130 THE LATCH!;
@@ -447,6 +447,7 @@ with arg2;
 #X msg 315 369 overdub;
 #X obj 315 309 r seq3-\$1-actions;
 #X obj 315 331 sel 5, f 12;
+#X msg 451 150 5;
 #X connect 1 0 8 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
@@ -508,3 +509,4 @@ with arg2;
 #X connect 73 0 72 0;
 #X connect 74 0 75 0;
 #X connect 75 0 73 0;
+#X connect 76 0 2 0;
