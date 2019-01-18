@@ -1,4 +1,4 @@
-#N canvas 380 65 1120 804 10;
+#N canvas 381 62 1120 804 10;
 #X obj 824 725 outlet;
 #X obj 201 59 inlet;
 #X text 118 54 beat clock;
