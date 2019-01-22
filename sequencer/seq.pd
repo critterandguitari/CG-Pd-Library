@@ -1,4 +1,4 @@
-#N canvas 260 151 1403 789 10;
+#N canvas 264 139 1403 789 10;
 #X msg 712 527 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
@@ -8,18 +8,12 @@
 #X obj 223 495 seq-player \$1;
 #X obj 578 470 seq-recorder \$1;
 #X obj 712 554 text define -k \$1;
-#A set 0 length 1525 \; 0 note 60 101 \; 327 note 69 100 \; 384 note
-71 100 \; 396 note 69 0 \; 430 note 72 100 \; 444 note 71 0 \; 475
-note 74 100 \; 493 note 72 0 \; 531 note 76 100 \; 548 note 74 0 \;
-580 note 77 100 \; 602 note 76 0 \; 645 note 79 100 \; 659 note 60
-0 \; 676 note 77 0 \; 694 note 83 100 \; 904 note 64 100 \; 911 note
-65 100 \; 984 note 62 100 \; 994 note 64 0 \; 1067 note 65 0 \; 1092
-note 79 0 \; 1131 note 83 0 \; 1212 note 69 100 \; 1278 note 68 100
-\; 1282 note 71 100 \; 1292 note 73 100 \; 1301 note 79 100 \; 1311
-note 72 100 \; 1332 note 81 100 \; 1419 note 62 0 \; 1434 note 72 0
-\; 1447 note 68 0 \; 1476 note 69 0 \; 1489 note 71 0 \; 1492 note
-71 100 \; 1495 note 71 0 \; 1497 note 79 0 \; 1499 note 81 0 \; 1500
-note 73 0 \;;
+#A set 0 length 1083 \; 0 note 71 100 \; 73 note 71 0 \; 181 note 72
+100 \; 225 note 72 0 \; 235 note 65 100 \; 328 note 65 0 \; 356 note
+72 100 \; 417 note 72 0 \; 448 note 65 100 \; 537 note 65 0 \; 554
+note 72 100 \; 599 note 72 0 \; 653 note 60 100 \; 737 note 60 0 \;
+738 note 74 100 \; 804 note 74 0 \; 890 note 76 100 \; 955 note 76
+0 \;;
 #X obj 422 77 inlet;
 #X obj 658 79 inlet;
 #X obj 223 678 outlet;
