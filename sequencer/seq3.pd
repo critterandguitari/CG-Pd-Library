@@ -1,4 +1,4 @@
-#N canvas 240 50 1534 925 10;
+#N canvas 241 50 1534 925 10;
 #X obj 311 781 outlet;
 #N canvas 11 50 867 431 latch 0;
 #X text 482 130 THE LATCH!;
@@ -397,8 +397,8 @@ quantize;
 #X obj 795 367 ==;
 #X obj 834 244 sel 0 1 2, f 28;
 #X msg 834 266 0;
-#X msg 898 273 1;
-#X obj 834 192 f \$2;
+#X msg 898 293 1;
+#X obj 834 182 f \$2;
 #X text 956 196 see the quantize stuff for the global quantize options
 with arg2;
 #X text 1046 250 0 = no q at all. 1+2 wait for beat to start seq;
