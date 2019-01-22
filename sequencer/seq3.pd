@@ -1,4 +1,4 @@
-#N canvas 238 50 1534 925 10;
+#N canvas 240 50 1534 925 10;
 #X obj 311 781 outlet;
 #N canvas 11 50 867 431 latch 0;
 #X text 482 130 THE LATCH!;
