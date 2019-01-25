@@ -1,4 +1,4 @@
-#N canvas 24 50 1555 852 10;
+#N canvas 27 50 1555 852 10;
 #X floatatom 580 245 5 0 0 1 tempo - -, f 5;
 #X obj 352 374 * 360;
 #X obj 352 396 i;
@@ -177,6 +177,10 @@
 #X obj 384 576 sel 0 1, f 12;
 #X msg 424 600 1;
 #X obj 800 455 t f f;
+#X text 1192 517 1 = internal bpm(set by og knob);
+#X text 1192 537 2 = LINK BPM;
+#X text 1192 557 3 = MIDI BPM;
+#X text 1192 577 4 = Hidden default bpm(off);
 #X connect 0 0 68 0;
 #X connect 1 0 2 0;
 #X connect 2 0 56 0;
