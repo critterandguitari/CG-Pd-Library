@@ -1,6 +1,6 @@
-#N canvas 343 273 1237 706 10;
+#N canvas 346 264 1237 706 10;
 #X obj 73 179 inlet aux;
-#N canvas 7 50 1163 752 print-grid 0;
+#N canvas 8 50 1163 752 print-grid 0;
 #X obj 606 425 s oscOut;
 #X msg 566 355 /oled/gFlip 3;
 #X msg 655 328 /oled/gFillArea 3 0 8 128 56 0;
@@ -61,7 +61,7 @@
 #X obj 73 314 sel 1 0, f 16;
 #X obj 363 470 route 61 63 66 68 70 73 75 78 80 82, f 81;
 #X text 135 342 go back to home screen;
-#N canvas 905 441 871 385 re-print 0;
+#N canvas 907 435 871 385 re-print 0;
 #X obj 96 30 inlet;
 #X text 614 82 clear the screen;
 #X msg 88 89 /oled/gFillArea 3 0 8 128 56 0;
@@ -118,7 +118,7 @@
 #X obj 310 35 unpack 0 0, f 23;
 #X obj 363 117 pack 0 0;
 #X obj 972 681 s cgSc-\$1-slots;
-#N canvas 411 207 1307 642 slots 0;
+#N canvas 412 204 1307 642 slots 0;
 #X obj 36 25 inlet;
 #X obj 36 47 route 60 62 64 65 67 69 71 72 74 76 77 79 81 83, f 144
 ;
@@ -229,6 +229,10 @@
 #X connect 47 0 40 0;
 #X connect 48 0 40 0;
 #X restore 972 569 pd slots;
+#X obj 845 45 inlet manual-reprint;
+#X obj 227 276 t b b;
+#X obj 898 84 r cgSc-\$1-aux;
+#X obj 845 107 spigot 0;
 #X connect 0 0 33 0;
 #X connect 2 0 16 0;
 #X connect 2 1 5 0;
@@ -269,3 +273,8 @@
 #X connect 36 1 37 1;
 #X connect 37 0 10 0;
 #X connect 39 0 38 0;
+#X connect 40 0 43 0;
+#X connect 41 0 16 0;
+#X connect 41 1 5 0;
+#X connect 42 0 43 1;
+#X connect 43 0 41 0;
