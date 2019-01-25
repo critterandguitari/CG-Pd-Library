@@ -1,4 +1,4 @@
-#N canvas 348 258 1237 706 10;
+#N canvas 349 255 1238 706 10;
 #X obj 73 179 inlet aux;
 #N canvas 8 50 1163 752 print-grid 0;
 #X obj 606 425 s oscOut;
@@ -236,7 +236,7 @@
 #X obj 1077 93 loadbang;
 #X msg 1077 115 0;
 #X obj 1077 137 s midiInGate;
-#X obj 554 319 notein, f 8;
+#X obj 957 186 notein, f 8;
 #N canvas 7 50 1280 956 chsel 0;
 #X obj 187 417 pack;
 #X obj 207 372 f;
@@ -272,7 +272,8 @@
 #X connect 12 0 14 0;
 #X connect 13 0 12 1;
 #X connect 14 0 6 0;
-#X restore 554 351 pd chsel;
+#X restore 957 218 pd chsel;
+#X text 1026 204 if u want midi in;
 #X connect 0 0 31 0;
 #X connect 2 0 14 0;
 #X connect 2 1 5 0;
@@ -323,4 +324,3 @@
 #X connect 47 0 48 0;
 #X connect 47 1 48 1;
 #X connect 47 2 48 2;
-#X connect 48 0 8 0;

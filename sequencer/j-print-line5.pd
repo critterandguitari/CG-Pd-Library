@@ -1,4 +1,4 @@
-#N canvas 378 50 1297 759 10;
+#N canvas 379 50 1297 759 10;
 #X obj 62 2 inlet BPM;
 #X obj 777 42 inlet print-for-seq;
 #X obj 835 531 s oscOut;
