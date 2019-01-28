@@ -1,4 +1,4 @@
-#N canvas 386 50 1297 759 10;
+#N canvas 387 50 1297 759 10;
 #X obj 62 2 inlet BPM;
 #X obj 777 42 inlet print-for-seq;
 #X obj 835 641 s oscOut;
@@ -51,11 +51,11 @@
 #X msg 345 204 /oled/gInvertArea 3 96 54 21 9;
 #X obj 1090 57 inlet;
 #X text 453 15 arg 1: nu \, ber to match the seq3 to print;
-#X obj 1011 176 sel 0 1;
-#X obj 1011 154 r seq3-\$1-overdub-on;
+#X obj 1016 154 sel 0 1;
+#X obj 1016 132 r seq3-\$1-overdub-on;
 #X obj 974 235 symbol;
-#X msg 1011 201 Rec;
-#X msg 1047 198 oDub;
+#X msg 1016 179 symbol Rec;
+#X msg 1061 213 symbol oDub;
 #X connect 0 0 22 0;
 #X connect 1 0 26 0;
 #X connect 3 0 2 0;
