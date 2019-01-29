@@ -1,4 +1,4 @@
-#N canvas 282 50 1204 958 10;
+#N canvas 283 50 1204 958 10;
 #X obj 81 22 inlet;
 #N canvas 12 50 449 300 note-tracker 0;
 #X msg 40 303 1;
@@ -97,21 +97,21 @@
 #X obj 113 700 bag;
 #X msg 138 665 flush;
 #X obj 113 722 pack 0 0;
-#X obj 125 267 r \$0-kill;
+#X obj 138 347 r \$0-kill;
 #X msg 503 80 1;
 #X obj 536 47 t b;
 #X msg 487 51 0;
 #X obj 487 22 sel 0 1;
 #X obj 632 200 clip 1 99;
 #X obj 407 464 < \$2, f 14;
-#X msg 449 584 \$1 \$2;
 #X obj 406 216 text size \$0-counter;
+#X msg 449 584 \$1 0 \, \$1 \$2;
 #X connect 0 0 2 0;
 #X connect 2 0 27 0;
 #X connect 2 1 1 0;
 #X connect 4 0 35 0;
 #X connect 5 0 6 0;
-#X connect 6 0 39 0;
+#X connect 6 0 38 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 8 0 15 0;
@@ -131,7 +131,7 @@
 #X connect 17 0 19 0;
 #X connect 18 0 20 0;
 #X connect 19 0 27 0;
-#X connect 20 0 38 0;
+#X connect 20 0 39 0;
 #X connect 21 1 16 0;
 #X connect 22 0 26 0;
 #X connect 23 0 5 1;
@@ -151,5 +151,5 @@
 #X connect 35 2 33 0;
 #X connect 36 0 37 1;
 #X connect 37 0 13 0;
-#X connect 38 0 27 0;
-#X connect 39 0 11 0;
+#X connect 38 0 11 0;
+#X connect 39 0 27 0;
