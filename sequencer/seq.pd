@@ -1,30 +1,29 @@
-#N canvas 276 103 1403 789 10;
-#X msg 712 527 clear;
+#N canvas 277 100 1403 789 10;
+#X msg 703 555 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
 #X obj 66 74 inlet;
-#X obj 67 103 s \$0beat-clock;
+#X obj 66 103 s \$0beat-clock;
 #X obj 223 403 r \$0beat-clock;
 #X obj 223 495 seq-player \$1;
 #X obj 578 470 seq-recorder \$1;
-#X obj 422 77 inlet;
-#X obj 658 79 inlet;
+#X obj 252 77 inlet;
+#X obj 647 79 inlet;
 #X obj 223 678 outlet;
 #X msg 828 260 start-sync;
-#X msg 1019 259 arm;
+#X msg 1017 259 arm;
 #X obj 578 350 r \$0beat-clock;
 #X obj 578 683 outlet;
-#X text 720 77 controls;
-#X obj 680 501 t b b;
+#X text 709 77 controls;
 #X msg 630 577 rec;
 #X text 291 679 events out;
-#X text 476 74 events in;
+#X text 306 74 events in;
 #X msg 492 586 end;
 #X msg 578 506 length \$1;
 #X obj 311 443 r \$0player;
 #X obj 780 333 s \$0player;
 #X obj 997 303 s \$0recorder;
-#X obj 680 424 r \$0recorder;
+#X obj 680 444 r \$0recorder;
 #X msg 780 259 start;
 #X text 129 74 clock;
 #X text 662 684 send all status out;
@@ -33,10 +32,8 @@
 #X obj 625 638 r \$0status;
 #X obj 923 362 s \$0status;
 #X text 1006 363 send out stop status too;
-#X obj 422 114 s \$0events-in;
+#X obj 252 114 s \$0events-in;
 #X obj 629 378 r \$0events-in;
-#X obj 689 152 route loop quantize-length play play-sync stop arm write
-read, f 65;
 #N canvas 4 50 680 291 stop-all 0;
 #X obj 98 58 inlet;
 #X msg 148 128 stop;
@@ -57,75 +54,100 @@ read, f 65;
 #X restore 923 259 pd stop-all;
 #X obj 946 189 t b;
 #X obj 1017 193 t b b;
-#X obj 1132 193 t a b;
+#X obj 1133 193 t a b;
 #X obj 1145 305 s \$0text;
-#X obj 777 528 r \$0text;
+#X obj 768 556 r \$0text;
 #X obj 1104 281 list trim;
 #X obj 1241 283 list trim;
 #X obj 1241 259 list prepend read;
 #X obj 1104 257 list prepend write;
 #X text 1190 186 stop sequencer before reading new file, f 23;
-#X obj 789 191 t b b b;
-#X obj 865 188 t b b b;
-#X obj 712 555 text define -k \$1;
-#A set 0 length 1049 \; 0 note 74 100 \; 64 note 72 100 \; 72 note
-74 0 \; 98 note 72 0 \; 104 note 71 100 \; 146 note 69 100 \; 147 note
-71 0 \; 200 note 67 100 \; 213 note 69 0 \; 218 note 69 100 \; 235
-note 60 100 \; 254 note 67 0 \; 289 note 69 0 \; 306 note 71 100 \;
-314 note 74 100 \; 328 note 60 0 \; 367 note 71 0 \; 372 note 60 100
-\; 412 note 65 100 \; 428 note 64 100 \; 449 note 74 0 \; 464 note
-60 0 \; 479 note 64 0 \; 510 note 67 100 \; 511 note 65 0 \; 534 note
-69 100 \; 535 note 67 0 \; 554 note 76 100 \; 640 note 69 0 \; 704
-note 76 0 \; 722 note 68 100 \; 764 note 77 100 \; 786 note 68 0 \;
-869 note 77 0 \; 899 note 79 100 \; 1034 note 79 0 \;;
-#X connect 0 0 50 0;
-#X connect 1 0 23 0;
-#X connect 2 0 23 0;
+#X obj 703 583 text define -k \$1;
+#A set 0 length 4747 \; 0 note 69 100 \; 116 note 71 100 \; 121 note
+69 0 \; 163 note 72 100 \; 171 note 71 0 \; 199 note 74 100 \; 208
+note 72 0 \; 232 note 76 100 \; 241 note 74 0 \; 268 note 77 100 \;
+281 note 76 0 \; 308 note 79 100 \; 331 note 77 0 \; 360 note 81 100
+\; 377 note 79 0 \; 420 note 83 100 \; 435 note 81 0 \; 501 note 83
+0 \; 584 note 60 100 \; 743 note 83 100 \; 818 note 81 100 \; 826 note
+83 0 \; 859 note 79 100 \; 867 note 81 0 \; 892 note 77 100 \; 897
+note 79 0 \; 923 note 76 100 \; 932 note 77 0 \; 952 note 74 100 \;
+958 note 76 0 \; 986 note 72 100 \; 990 note 74 0 \; 1026 note 71 100
+\; 1032 note 72 0 \; 1074 note 69 100 \; 1079 note 71 0 \; 1112 note
+69 0 \; 1167 note 60 0 \; 1181 note 65 100 \; 1237 note 60 100 \; 1254
+note 67 100 \; 1266 note 65 0 \; 1306 note 69 100 \; 1314 note 67 0
+\; 1345 note 71 100 \; 1350 note 69 0 \; 1381 note 72 100 \; 1386 note
+71 0 \; 1410 note 74 100 \; 1420 note 72 0 \; 1443 note 76 100 \; 1453
+note 74 0 \; 1489 note 77 100 \; 1493 note 76 0 \; 1522 note 79 100
+\; 1535 note 77 0 \; 1562 note 81 100 \; 1568 note 79 0 \; 1594 note
+83 100 \; 1604 note 81 0 \; 1635 note 83 0 \; 1715 note 60 0 \; 1791
+note 83 100 \; 1842 note 81 100 \; 1851 note 83 0 \; 1865 note 60 100
+\; 1876 note 79 100 \; 1883 note 81 0 \; 1917 note 77 100 \; 1924 note
+79 0 \; 1950 note 76 100 \; 1957 note 77 0 \; 1981 note 76 0 \; 1985
+note 74 100 \; 2015 note 74 0 \; 2018 note 72 100 \; 2044 note 71 100
+\; 2047 note 72 0 \; 2080 note 71 0 \; 2081 note 69 100 \; 2097 note
+69 0 \; 2131 note 60 0 \; 2170 note 67 100 \; 2263 note 69 100 \; 2268
+note 67 0 \; 2307 note 71 100 \; 2316 note 69 0 \; 2351 note 72 100
+\; 2357 note 71 0 \; 2395 note 74 100 \; 2400 note 72 0 \; 2450 note
+74 0 \; 2518 note 60 100 \; 2531 note 79 100 \; 2664 note 79 0 \; 2673
+note 60 0 \; 2716 note 79 100 \; 2728 note 60 100 \; 2928 note 60 0
+\; 3075 note 76 100 \; 3109 note 79 0 \; 3330 note 76 0 \; 3424 note
+76 100 \; 3494 note 74 100 \; 3517 note 76 0 \; 3628 note 76 100 \;
+3648 note 74 0 \; 3731 note 74 100 \; 3740 note 76 0 \; 3803 note 76
+100 \; 3826 note 74 0 \; 3889 note 77 100 \; 3907 note 76 0 \; 4589
+note 77 0 \;;
+#X obj 680 501 t b b b;
+#X obj 865 188 t b b;
+#X obj 789 191 t b b;
+#X obj 689 152 route loop quantize-length play play-sync stop arm write
+read, f 73;
+#X connect 0 0 46 0;
+#X connect 1 0 22 0;
+#X connect 2 0 22 0;
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X connect 6 0 10 0;
-#X connect 6 1 20 0;
-#X connect 7 0 21 0;
-#X connect 7 1 16 0;
-#X connect 8 0 34 0;
-#X connect 9 0 29 0;
-#X connect 11 0 23 0;
-#X connect 12 0 24 0;
+#X connect 6 1 19 0;
+#X connect 7 0 20 0;
+#X connect 7 1 47 0;
+#X connect 8 0 33 0;
+#X connect 9 0 28 0;
+#X connect 11 0 22 0;
+#X connect 12 0 23 0;
 #X connect 13 0 7 0;
-#X connect 16 0 17 0;
-#X connect 16 1 0 0;
-#X connect 17 0 14 0;
+#X connect 16 0 14 0;
+#X connect 19 0 14 0;
 #X connect 20 0 14 0;
-#X connect 21 0 14 0;
-#X connect 22 0 6 1;
-#X connect 25 0 7 2;
-#X connect 26 0 23 0;
-#X connect 29 0 30 0;
-#X connect 29 1 36 0;
-#X connect 31 0 14 0;
-#X connect 35 0 7 1;
-#X connect 36 0 1 0;
-#X connect 36 1 2 0;
-#X connect 36 2 48 0;
-#X connect 36 3 49 0;
-#X connect 36 4 38 0;
-#X connect 36 5 39 0;
-#X connect 36 6 46 0;
-#X connect 36 7 40 0;
-#X connect 37 0 32 0;
-#X connect 37 1 23 0;
-#X connect 37 2 24 0;
-#X connect 38 0 37 0;
-#X connect 39 0 12 0;
-#X connect 39 1 37 0;
-#X connect 40 0 45 0;
-#X connect 40 1 37 0;
-#X connect 42 0 50 0;
-#X connect 43 0 41 0;
+#X connect 21 0 6 1;
+#X connect 24 0 7 2;
+#X connect 25 0 22 0;
+#X connect 28 0 29 0;
+#X connect 28 1 50 0;
+#X connect 30 0 14 0;
+#X connect 34 0 7 1;
+#X connect 35 0 31 0;
+#X connect 35 1 22 0;
+#X connect 35 2 23 0;
+#X connect 36 0 35 0;
+#X connect 37 0 12 0;
+#X connect 37 1 35 0;
+#X connect 38 0 43 0;
+#X connect 38 1 35 0;
+#X connect 40 0 46 0;
+#X connect 41 0 39 0;
+#X connect 42 0 39 0;
+#X connect 43 0 42 0;
 #X connect 44 0 41 0;
-#X connect 45 0 44 0;
-#X connect 46 0 43 0;
-#X connect 48 0 26 0;
-#X connect 48 1 37 0;
-#X connect 49 0 11 0;
-#X connect 49 1 37 0;
+#X connect 47 0 16 0;
+#X connect 47 1 0 0;
+#X connect 48 0 11 0;
+#X connect 48 1 35 0;
+#X connect 49 0 25 0;
+#X connect 49 1 35 0;
+#X connect 50 0 1 0;
+#X connect 50 1 2 0;
+#X connect 50 2 49 0;
+#X connect 50 3 48 0;
+#X connect 50 4 36 0;
+#X connect 50 5 37 0;
+#X connect 50 6 44 0;
+#X connect 50 7 38 0;
