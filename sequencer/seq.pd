@@ -1,5 +1,5 @@
-#N canvas 280 91 1403 789 10;
-#X msg 703 555 clear;
+#N canvas 283 82 1403 789 10;
+#X msg 680 563 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
 #X obj 66 74 inlet;
@@ -15,7 +15,7 @@
 #X obj 578 350 r \$0beat-clock;
 #X obj 578 683 outlet;
 #X text 709 17 controls;
-#X msg 630 577 rec;
+#X msg 712 529 rec;
 #X text 291 679 events out;
 #X text 306 74 events in;
 #X msg 492 586 end;
@@ -56,27 +56,21 @@
 #X obj 1017 193 t b b;
 #X obj 1133 193 t a b;
 #X obj 1145 305 s \$0text;
-#X obj 768 556 r \$0text;
+#X obj 745 564 r \$0text;
 #X obj 1104 281 list trim;
 #X obj 1241 283 list trim;
 #X obj 1241 259 list prepend read;
 #X obj 1104 257 list prepend write;
 #X text 1190 186 stop sequencer before reading new file, f 23;
-#X obj 703 583 text define -k \$1;
-#A set 0 length 746 \; 0 note 69 100 \; 17 note 60 100 \; 54 note 69
-0 \; 83 note 60 100 \; 140 note 60 0 \; 157 note 67 100 \; 199 note
-67 0 \; 225 note 60 100 \; 288 note 60 0 \; 312 note 69 100 \; 326
-note 60 0 \; 428 note 69 0 \; 488 note 71 100 \; 524 note 60 100 \;
-541 note 71 0 \; 563 note 72 100 \; 603 note 72 0 \; 612 note 74 100
-\; 647 note 60 0 \; 683 note 74 0 \; 689 note 76 100 \; 701 note 60
-100 \; 737 note 76 0 \;;
-#X obj 680 501 t b b b;
+#X obj 680 591 text define -k \$1;
+#A set 0 length 632 \; 0 note 60 100 \; 126 note 64 100 \; 164 note
+60 0 \; 220 note 64 0 \; 345 note 67 100 \; 580 note 67 0 \;;
 #X obj 865 188 t b b;
 #X obj 789 191 t b b;
+#X obj 680 501 t b b;
+#X obj 599 537 r \$0-clear;
 #X obj 679 92 route loop quantize-length play play-sync stop arm write
-read clear, f 82;
-#X obj 1186 149 s \$0recorder;
-#X msg 1186 123 stop \, arm;
+read, f 82;
 #X connect 0 0 46 0;
 #X connect 1 0 22 0;
 #X connect 2 0 22 0;
@@ -85,7 +79,7 @@ read clear, f 82;
 #X connect 6 0 10 0;
 #X connect 6 1 19 0;
 #X connect 7 0 20 0;
-#X connect 7 1 47 0;
+#X connect 7 1 49 0;
 #X connect 8 0 33 0;
 #X connect 9 0 28 0;
 #X connect 11 0 22 0;
@@ -98,7 +92,7 @@ read clear, f 82;
 #X connect 24 0 7 2;
 #X connect 25 0 22 0;
 #X connect 28 0 29 0;
-#X connect 28 1 50 0;
+#X connect 28 1 51 0;
 #X connect 30 0 14 0;
 #X connect 34 0 7 1;
 #X connect 35 0 31 0;
@@ -114,19 +108,18 @@ read clear, f 82;
 #X connect 42 0 39 0;
 #X connect 43 0 42 0;
 #X connect 44 0 41 0;
-#X connect 47 0 16 0;
-#X connect 47 1 0 0;
-#X connect 48 0 11 0;
+#X connect 47 0 11 0;
+#X connect 47 1 35 0;
+#X connect 48 0 25 0;
 #X connect 48 1 35 0;
-#X connect 49 0 25 0;
-#X connect 49 1 35 0;
-#X connect 50 0 1 0;
-#X connect 50 1 2 0;
-#X connect 50 2 49 0;
-#X connect 50 3 48 0;
-#X connect 50 4 36 0;
-#X connect 50 5 37 0;
-#X connect 50 6 44 0;
-#X connect 50 7 38 0;
-#X connect 50 8 52 0;
-#X connect 52 0 51 0;
+#X connect 49 0 0 0;
+#X connect 49 1 16 0;
+#X connect 50 0 0 0;
+#X connect 51 0 1 0;
+#X connect 51 1 2 0;
+#X connect 51 2 48 0;
+#X connect 51 3 47 0;
+#X connect 51 4 36 0;
+#X connect 51 5 37 0;
+#X connect 51 6 44 0;
+#X connect 51 7 38 0;
