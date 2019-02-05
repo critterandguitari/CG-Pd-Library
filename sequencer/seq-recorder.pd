@@ -1,4 +1,4 @@
-#N canvas 381 62 1120 804 10;
+#N canvas 383 56 1120 804 10;
 #X obj 824 725 outlet;
 #X obj 201 59 inlet;
 #X text 118 54 beat clock;
@@ -54,7 +54,7 @@ events..;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X restore 698 519 pd write-dummy-length;
-#N canvas 10 50 526 364 write-length 0;
+#N canvas 11 50 526 364 write-length 0;
 #X obj 202 259 t a b;
 #X msg 235 293 0;
 #X msg 202 228 list 0 length \$1;
