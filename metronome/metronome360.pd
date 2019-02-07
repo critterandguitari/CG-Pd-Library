@@ -1,4 +1,4 @@
-#N canvas 30 50 1766 914 10;
+#N canvas 34 50 1766 914 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
@@ -66,7 +66,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 48 207 / 5;
 #X obj 330 246 % 5;
 #X obj 284 58 array define -k \$0-bpm-mean 5;
-#A 0 85.0694 85.0694 85.7754 84.375 85.0694;
+#A 0 120.888 118.804 120.888 119.491 120.185;
 #X connect 0 0 5 0;
 #X connect 1 0 3 1;
 #X connect 2 0 11 0;
@@ -198,6 +198,10 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X text 1464 775 3 = MIDI BPM;
 #X text 1464 795 4 = Hidden default bpm(off);
 #X obj 781 464 spigot 1, f 12;
+#X obj 1534 549 sel 1 2 3 4;
+#X msg 1625 597 0;
+#X msg 1568 599 1;
+#X obj 1542 640 s metro-state;
 #X connect 0 0 1 0;
 #X connect 8 0 89 0;
 #X connect 9 0 10 0;
@@ -266,6 +270,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 71 0 69 0;
 #X connect 72 0 65 0;
 #X connect 73 0 60 0;
+#X connect 73 0 90 0;
 #X connect 74 0 20 0;
 #X connect 75 0 79 0;
 #X connect 76 0 78 0;
@@ -281,3 +286,9 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 84 0 21 0;
 #X connect 84 1 39 0;
 #X connect 89 0 74 0;
+#X connect 90 0 92 0;
+#X connect 90 1 92 0;
+#X connect 90 2 92 0;
+#X connect 90 3 91 0;
+#X connect 91 0 93 0;
+#X connect 92 0 93 0;
