@@ -1,4 +1,4 @@
-#N canvas 179 139 1004 697 10;
+#N canvas 180 136 1004 697 10;
 #N canvas 13 50 476 382 latch 0;
 #X text 191 93 THE LATCH!;
 #X msg 232 200 1;
@@ -395,7 +395,7 @@ of select;
 #X text 563 364 loop or not;
 #X msg 477 383 0 loop 1 \, 1 loop 1;
 #X msg 399 451 0 quantize-length \$1 \, 1 quantize-length \$1;
-#N canvas 316 50 1155 609 overdub 1;
+#N canvas 316 50 1155 609 overdub 0;
 #X obj 223 31 r seq3-\$1-actions;
 #X text 243 4 overdub;
 #N canvas 20 50 739 692 countdown 0;
