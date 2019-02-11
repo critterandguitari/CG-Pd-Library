@@ -1,4 +1,4 @@
-#N canvas 36 50 1766 914 10;
+#N canvas 40 50 1766 914 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
@@ -29,7 +29,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 553 327 spigot 0;
 #X obj 606 297 r \$0-strtStop;
 #X obj 1086 556 r link-session-present;
-#X obj 553 834 outlet beat-clock;
+#X obj 553 894 outlet beat-clock;
 #X obj 781 844 outlet Tempo;
 #N canvas 303 750 292 294 mstobpm 0;
 #X obj 46 14 inlet;
@@ -66,7 +66,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 48 207 / 5;
 #X obj 330 246 % 5;
 #X obj 284 58 array define -k \$0-bpm-mean 5;
-#A 0 120.185 121.599 118.804 121.599 119.491;
+#A 0 120 120 120 120 120;
 #X floatatom 230 131 5 0 0 0 - - -, f 5;
 #X connect 0 0 5 0;
 #X connect 1 0 3 1;
@@ -128,7 +128,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 585 697 s \$0-clock-source;
 #X obj 1304 726 r \$0-clock-source;
 #X obj 585 521 f 0;
-#X obj 553 802 clockfix;
+#X obj 553 772 clockfix;
 #X obj 1065 680 s \$0-clock-source;
 #X obj 1033 630 t f b;
 #X msg 1065 657 2;
@@ -204,6 +204,18 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X msg 1625 597 0;
 #X msg 1568 599 1;
 #X obj 1543 639 s metro-state;
+#X obj 553 794 t f f;
+#X obj 585 817 % 15;
+#X obj 585 839 sel 0;
+#X obj 585 861 s midi-ticks;
+#X obj 1545 152 r seq3-\$1-actions;
+#X obj 1607 203 t b;
+#X obj 1349 165 r seq3-\$1-playing;
+#X obj 1349 193 spigot 0;
+#X obj 1349 225 t b b;
+#X msg 1419 213 0;
+#X msg 1545 195 1;
+#X obj 1545 173 sel 1 4 6;
 #X connect 0 0 1 0;
 #X connect 8 0 89 0;
 #X connect 9 0 10 0;
@@ -266,7 +278,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 64 1 72 0;
 #X connect 66 0 73 0;
 #X connect 67 0 64 0;
-#X connect 68 0 19 0;
+#X connect 68 0 94 0;
 #X connect 70 0 68 0;
 #X connect 70 1 71 0;
 #X connect 71 0 69 0;
@@ -294,3 +306,17 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 90 3 91 0;
 #X connect 91 0 93 0;
 #X connect 92 0 93 0;
+#X connect 94 0 19 0;
+#X connect 94 1 95 0;
+#X connect 95 0 96 0;
+#X connect 96 0 97 0;
+#X connect 98 0 105 0;
+#X connect 99 0 58 0;
+#X connect 100 0 101 0;
+#X connect 101 0 102 0;
+#X connect 102 0 56 0;
+#X connect 102 1 103 0;
+#X connect 103 0 101 1;
+#X connect 104 0 101 1;
+#X connect 105 0 104 0;
+#X connect 105 3 99 0;

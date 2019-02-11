@@ -1,4 +1,4 @@
-#N canvas 293 52 1403 789 10;
+#N canvas 299 50 1403 789 10;
 #X msg 680 563 clear;
 #X msg 575 260 loop \$1;
 #X msg 638 261 quantize-length \$1;
@@ -63,10 +63,8 @@
 #X obj 1104 257 list prepend write;
 #X text 1190 186 stop sequencer before reading new file, f 23;
 #X obj 680 591 text define -k \$1;
-#A set 0 length 705 \; 0 note 72 101 \; 0 note 69 101 \; 150 note 69
-0 \; 165 note 72 0 \; 255 note 74 100 \; 255 note 71 100 \; 405 note
-71 0 \; 405 note 74 0 \; 465 note 77 100 \; 465 note 72 100 \; 480
-note 76 100 \; 555 note 77 0 \; 570 note 76 0 \; 585 note 72 0 \;;
+#A set 0 length 1528 \; 0 note 69 100 \; 789 note 72 100 \; 793 note
+69 0 \; 1479 note 72 0 \;;
 #X obj 865 188 t b b;
 #X obj 789 191 t b b;
 #X obj 680 501 t b b;
@@ -75,6 +73,7 @@ note 76 100 \; 555 note 77 0 \; 570 note 76 0 \; 585 note 72 0 \;;
 read, f 82;
 #X text 53 211 if start-sync happens when clock is <179 immediately
 play and all notes will play that have been skipped.;
+#X msg 315 546 isPlaying;
 #X connect 0 0 46 0;
 #X connect 1 0 22 0;
 #X connect 2 0 22 0;
@@ -82,6 +81,7 @@ play and all notes will play that have been skipped.;
 #X connect 5 0 6 0;
 #X connect 6 0 10 0;
 #X connect 6 1 19 0;
+#X connect 6 2 53 0;
 #X connect 7 0 20 0;
 #X connect 7 1 49 0;
 #X connect 8 0 33 0;
@@ -127,3 +127,4 @@ play and all notes will play that have been skipped.;
 #X connect 51 5 37 0;
 #X connect 51 6 44 0;
 #X connect 51 7 38 0;
+#X connect 53 0 14 0;
