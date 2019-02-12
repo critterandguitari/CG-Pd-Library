@@ -61,7 +61,7 @@
 #X obj 73 254 sel 1 0, f 16;
 #X obj 363 410 route 61 63 66 68 70 73 75 78 80 82, f 81;
 #X text 136 288 go back to home screen;
-#N canvas 908 432 871 385 re-print 0;
+#N canvas 910 426 871 385 re-print 0;
 #X obj 96 30 inlet;
 #X text 614 82 clear the screen;
 #X msg 88 89 /oled/gFillArea 3 0 8 128 56 0;
