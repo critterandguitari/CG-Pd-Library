@@ -106,7 +106,7 @@
 #X obj 310 35 unpack 0 0, f 23;
 #X obj 363 117 pack 0 0;
 #X obj 972 621 s cgSc-\$1-slots;
-#N canvas 416 192 1307 642 slots 0;
+#N canvas 417 189 1307 642 slots 0;
 #X obj 36 25 inlet;
 #X obj 36 47 route 60 62 64 65 67 69 71 72 74 76 77 79 81 83, f 144
 ;
@@ -350,6 +350,7 @@
 #X obj 724 515 sc-module \$1 8;
 #X obj 805 471 sc-module \$1 9;
 #X obj 746 294 s cgSc-\$1-muter;
+#X text 1043 509 bottom keys/white keys;
 #X connect 0 0 21 0;
 #X connect 2 0 13 0;
 #X connect 2 1 5 0;
