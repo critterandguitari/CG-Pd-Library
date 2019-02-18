@@ -1,4 +1,4 @@
-#N canvas 50 50 1766 914 10;
+#N canvas 51 50 1766 914 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
