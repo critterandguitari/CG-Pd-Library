@@ -1,4 +1,4 @@
-#N canvas 45 50 1766 914 10;
+#N canvas 49 50 1766 914 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
@@ -137,7 +137,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 581 138 r midi-clock-present;
 #X obj 607 163 r link-session-present;
 #X obj 581 190 sel 0;
-#N canvas 30 50 815 554 LINK 0;
+#N canvas 33 50 815 554 LINK 0;
 #X msg 355 126 tempo \$1;
 #X msg 144 127 resolution \$1;
 #X msg 247 147 reset \$1 \$2;
