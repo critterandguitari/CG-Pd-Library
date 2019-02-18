@@ -1,4 +1,4 @@
-#N canvas 6 50 958 612 10;
+#N canvas 8 50 958 612 10;
 #X msg 334 225 0;
 #X obj 366 105 t b b;
 #X msg 398 225 1;
@@ -11,6 +11,8 @@
 #X msg 239 177 69;
 #X obj 239 137 t b a;
 #X obj 239 222 route 69;
+#X obj 651 35 inlet;
+#X obj 651 57 t b;
 #X connect 0 0 4 1;
 #X connect 1 0 9 0;
 #X connect 1 1 2 0;
@@ -25,3 +27,5 @@
 #X connect 10 0 9 0;
 #X connect 10 1 8 1;
 #X connect 11 0 4 0;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
