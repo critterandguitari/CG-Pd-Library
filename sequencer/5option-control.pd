@@ -1,4 +1,4 @@
-#N canvas 207 50 1475 882 10;
+#N canvas 210 50 1475 882 10;
 #X obj 139 338 outlet;
 #X obj 65 181 t b;
 #X msg 65 203 2;
@@ -102,6 +102,8 @@
 #X obj 417 508 r seq3-\$1-actions;
 #X obj 612 140 r seq3-\$1-actions;
 #X text 681 50 Standard Control code for seq3;
+#X obj 28 244 loadbang;
+#X msg 28 266 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
@@ -209,3 +211,5 @@
 #X connect 98 0 99 0;
 #X connect 100 0 13 0;
 #X connect 101 0 56 0;
+#X connect 103 0 104 0;
+#X connect 104 0 0 0;
