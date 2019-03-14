@@ -1,4 +1,4 @@
-#N canvas 18 50 1290 712 10;
+#N canvas 19 50 1290 712 10;
 #X obj 73 119 inlet aux;
 #N canvas 9 50 1163 752 print-grid 0;
 #X obj 606 425 s oscOut;
@@ -222,7 +222,7 @@
 #X obj 898 84 r cgSc-\$1-aux;
 #X obj 845 107 spigot 0;
 #X obj 363 139 t a a;
-#N canvas 753 198 1143 710 print-slots 0;
+#N canvas 754 195 1143 710 print-slots 0;
 #X obj 126 540 s oscOut;
 #X msg 39 391 /oled/gFlip 3;
 #X obj 264 362 f;
@@ -254,12 +254,6 @@
 #X obj 346 43 loadbang;
 #X obj 346 65 del 20;
 #X msg 346 87 1;
-#X obj 478 15 r change-page;
-#X obj 510 60 t b;
-#X obj 478 112 f;
-#X obj 478 37 sel 4;
-#X msg 478 59 0;
-#X msg 510 84 1;
 #X connect 1 0 0 0;
 #X connect 2 0 17 0;
 #X connect 3 0 1 0;
@@ -300,13 +294,6 @@
 #X connect 28 0 29 0;
 #X connect 29 0 30 0;
 #X connect 30 0 27 1;
-#X connect 31 0 34 0;
-#X connect 32 0 36 0;
-#X connect 33 0 27 1;
-#X connect 34 0 35 0;
-#X connect 34 1 32 0;
-#X connect 35 0 33 0;
-#X connect 36 0 33 0;
 #X restore 791 13 pd print-slots;
 #X text 31 13 Arg 1: match number to seq3;
 #X text 31 33 Arg 2: Midi in on/off;
