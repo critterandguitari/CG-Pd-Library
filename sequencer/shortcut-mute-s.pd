@@ -8,8 +8,9 @@
 #X obj 239 304 outlet;
 #X obj 239 221 symbol;
 #X obj 334 124 r cgSc-\$1-muter;
+#X obj 291 232 del 1;
 #X connect 0 0 4 1;
-#X connect 1 0 7 0;
+#X connect 1 0 9 0;
 #X connect 1 1 2 0;
 #X connect 2 0 4 1;
 #X connect 3 0 0 0;
@@ -18,3 +19,4 @@
 #X connect 5 0 7 0;
 #X connect 7 0 4 0;
 #X connect 8 0 3 0;
+#X connect 9 0 7 0;
