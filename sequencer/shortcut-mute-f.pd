@@ -7,11 +7,12 @@
 #X obj 239 80 inlet;
 #X obj 239 221 f;
 #X obj 239 364 outlet;
-#X obj 334 124 r cgSc-\$1-muter;
 #X obj 506 77 inlet;
 #X obj 506 99 t b;
+#X obj 334 124 r cgSc-\$1-mute-print;
+#X obj 258 167 del 1;
 #X connect 0 0 4 1;
-#X connect 1 0 6 0;
+#X connect 1 0 11 0;
 #X connect 1 1 2 0;
 #X connect 2 0 4 1;
 #X connect 3 0 0 0;
@@ -19,6 +20,7 @@
 #X connect 4 0 7 0;
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
-#X connect 8 0 3 0;
-#X connect 9 0 10 0;
-#X connect 10 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 10 0 3 0;
+#X connect 11 0 6 0;

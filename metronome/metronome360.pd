@@ -17,7 +17,7 @@ where a tick is shorter than a dsp cycle in Pd (otherwise some numbers
 get skipped). also necessary for lower resolution clock sources like
 midi clock. it doesn't interpolate \, but does ensure we always get
 0-359 no matter what goes in.;
-#X floatatom 781 294 5 0 0 1 tempo - -, f 5;
+#X floatatom 781 294 5 0 0 1 tempo - -;
 #X obj 553 423 * 360;
 #X obj 553 445 i;
 #X obj 500 128 moses 10;
@@ -66,8 +66,8 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 48 207 / 5;
 #X obj 330 246 % 5;
 #X obj 284 58 array define -k \$0-bpm-mean 5;
-#A 0 68.9062 69.1367 69.1367 69.6023 68.9062;
-#X floatatom 230 131 5 0 0 0 - - -, f 5;
+#A 0 120 120 120 120 120;
+#X floatatom 230 131 5 0 0 0 - - -;
 #X connect 0 0 5 0;
 #X connect 1 0 3 1;
 #X connect 2 0 11 0;
@@ -142,18 +142,18 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X msg 144 127 resolution \$1;
 #X msg 247 147 reset \$1 \$2;
 #X obj 247 126 pack f f;
-#X floatatom 266 247 5 0 0 1 beat_time - -, f 5;
-#X floatatom 180 285 5 0 0 1 step - -, f 5;
-#X floatatom 378 246 5 0 0 1 tempo - -, f 5;
+#X floatatom 266 247 5 0 0 1 beat_time - -;
+#X floatatom 180 285 5 0 0 1 step - -;
+#X floatatom 378 246 5 0 0 1 tempo - -;
 #X obj 59 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 180 199 abl_link~ 1 0 4 134;
-#X floatatom 355 107 5 0 0 2 tempo - -, f 5;
-#X floatatom 292 107 5 0 0 2 quantum - -, f 5;
-#X floatatom 247 107 5 0 0 2 beat - -, f 5;
-#X floatatom 144 107 5 0 0 2 resolution - -, f 5;
+#X floatatom 355 107 5 0 0 2 tempo - -;
+#X floatatom 292 107 5 0 0 2 quantum - -;
+#X floatatom 247 107 5 0 0 2 beat - -;
+#X floatatom 144 107 5 0 0 2 resolution - -;
 #X msg 59 125 connect \$1;
-#X floatatom 510 231 5 0 0 0 - - -, f 5;
+#X floatatom 510 231 5 0 0 0 - - -;
 #X obj 510 209 r #abl_link_num_peers;
 #X obj 32 45 loadbang;
 #X obj 32 67 delay 100;
