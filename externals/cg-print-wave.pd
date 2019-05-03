@@ -57,11 +57,11 @@
 #X msg 224 295 0;
 #X msg 547 211 0;
 #X obj 548 249 tabread \$5-length;
-#X obj 205 445 tabread \$5-L;
-#X obj 591 463 tabread \$5-L;
 #X msg 444 741 /oled/gClear 3 1;
 #X obj 178 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 205 445 tabread \$5;
+#X obj 591 463 tabread \$5;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 6 0;
@@ -71,7 +71,7 @@
 #X connect 5 0 15 0;
 #X connect 6 0 40 0;
 #X connect 6 1 36 0;
-#X connect 7 0 58 0;
+#X connect 7 0 60 0;
 #X connect 8 0 32 0;
 #X connect 9 0 37 0;
 #X connect 14 0 5 0;
@@ -87,7 +87,7 @@
 #X connect 23 0 29 0;
 #X connect 24 0 39 0;
 #X connect 24 1 38 0;
-#X connect 25 0 59 0;
+#X connect 25 0 61 0;
 #X connect 26 0 19 1;
 #X connect 27 0 30 0;
 #X connect 28 0 23 0;
@@ -122,7 +122,7 @@
 #X connect 55 0 1 1;
 #X connect 56 0 57 0;
 #X connect 57 0 48 0;
-#X connect 58 0 4 0;
-#X connect 59 0 22 0;
-#X connect 60 0 31 0;
-#X connect 61 0 51 0;
+#X connect 58 0 31 0;
+#X connect 59 0 51 0;
+#X connect 60 0 4 0;
+#X connect 61 0 22 0;
