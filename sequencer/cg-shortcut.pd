@@ -57,10 +57,10 @@
 #X connect 23 2 19 0;
 #X connect 23 3 2 0;
 #X connect 24 0 23 0;
-#X restore 143 420 pd print-grid;
-#X obj 74 314 sel 1 0, f 16;
+#X restore 170 420 pd print-grid;
+#X obj 101 314 sel 1 0, f 16;
 #X obj 363 410 route 61 63 66 68 70 73 75 78 80 82, f 81;
-#X text 134 342 go back to home screen;
+#X text 161 342 go back to home screen;
 #N canvas 910 426 871 385 re-print 0;
 #X obj 96 30 inlet;
 #X text 614 82 clear the screen;
@@ -68,7 +68,7 @@
 #X obj 88 111 s oscOut;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
-#X restore 120 359 pd re-print;
+#X restore 147 359 pd re-print;
 #X obj 497 212 ==;
 #N canvas 5 50 450 300 just-note-offs 0;
 #X obj 67 16 inlet;
@@ -92,9 +92,9 @@
 #X text 598 328 so notes dont get stuck;
 #X obj 444 249 spigot 1;
 #X obj 363 249 spigot 0;
-#X obj 74 395 t b b, f 12;
+#X obj 101 395 t b b, f 12;
 #X obj 683 189 s cgSc-\$1-aux;
-#X obj 74 448 s cgSc-\$1-print!;
+#X obj 101 448 s cgSc-\$1-print!;
 #X obj 870 442 sc-module \$1 10;
 #X obj 310 65 moses 60;
 #X obj 363 87 moses 84;
@@ -213,7 +213,7 @@
 #X connect 48 0 40 0;
 #X restore 972 509 pd slots;
 #X obj 845 45 inlet manual-reprint;
-#X obj 117 281 t b b;
+#X obj 144 281 t b b;
 #X obj 845 107 spigot 0;
 #X obj 363 139 t a a;
 #N canvas 754 195 1143 710 print-slots 0;
@@ -304,7 +304,7 @@
 #X obj 814 471 sc-module \$1 9;
 #X text 1043 509 bottom keys/white keys;
 #X obj 310 11 r notesRaw;
-#N canvas 4 50 450 300 cancel-print-if-press-is-short 1;
+#N canvas 4 50 450 300 cancel-print-if-press-is-short 0;
 #X obj 79 12 inlet;
 #X obj 79 53 sel 0 1, f 21;
 #X msg 79 103 0;
@@ -328,7 +328,7 @@
 #X connect 8 0 6 0;
 #X connect 9 0 5 0;
 #X restore 74 194 pd cancel-print-if-press-is-short;
-#X obj 74 215 t f f;
+#X obj 74 222 t f f;
 #N canvas 4 50 450 300 midi-in 0;
 #X obj 63 195 outlet;
 #X obj 71 93 notein;
@@ -376,7 +376,7 @@
 #X obj 84 530 spigot \$2;
 #X text 40 488 midi notes to seq but cant control the shortcuts;
 #X obj 74 160 t f f f f, f 102;
-#X obj 101 236 s cgSc-\$1-mute-print;
+#X obj 74 261 s cgSc-\$1-mute-print;
 #X obj 898 84 r cgSc-\$1-mute-print;
 #X connect 0 0 46 0;
 #X connect 2 0 13 0;
@@ -414,8 +414,8 @@
 #X connect 27 0 25 0;
 #X connect 40 0 19 0;
 #X connect 41 0 42 0;
-#X connect 42 0 2 0;
-#X connect 42 1 47 0;
+#X connect 42 0 47 0;
+#X connect 42 1 2 0;
 #X connect 43 0 44 0;
 #X connect 44 0 8 0;
 #X connect 46 0 41 0;
