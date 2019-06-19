@@ -1,4 +1,4 @@
-#N canvas 55 50 1766 914 10;
+#N canvas 134 235 1206 475 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
@@ -66,7 +66,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X obj 48 207 / 5;
 #X obj 330 246 % 5;
 #X obj 284 58 array define -k \$0-bpm-mean 5;
-#A 0 229.688 232.268 234.908 232.268 234.908;
+#A 0 120 120 120 120 120;
 #X floatatom 230 131 5 0 0 0 - - -;
 #X connect 0 0 5 0;
 #X connect 1 0 3 1;
