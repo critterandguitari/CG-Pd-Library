@@ -311,7 +311,7 @@
 #X obj 79 251 outlet;
 #X obj 142 78 t b b;
 #X obj 79 223 change -1;
-#X obj 142 168 del 220;
+#X obj 142 168 del 440;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 7 0;
