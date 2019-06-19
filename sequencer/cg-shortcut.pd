@@ -380,6 +380,8 @@
 #X obj 907 144 s cgSc-\$1-hihghlight;
 #X obj 907 102 clip 1 10;
 #X obj 907 123 i;
+#X obj 218 74 loadbang;
+#X msg 218 95 0;
 #X connect 0 0 45 0;
 #X connect 2 0 13 0;
 #X connect 2 1 5 0;
@@ -429,3 +431,6 @@
 #X connect 49 1 51 0;
 #X connect 51 0 52 0;
 #X connect 52 0 50 0;
+#X connect 53 0 54 0;
+#X connect 54 0 14 0;
+#X connect 54 0 46 0;
