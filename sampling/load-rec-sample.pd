@@ -43,7 +43,7 @@ with the internal mic on;
 #X restore 252 115 pd peak-trigger;
 #X obj 295 45 r \$0-open-trig;
 #X obj 339 72 r \$1-trig-percent;
-#N canvas 387 94 853 578 soundfiler 0;
+#N canvas 221 136 853 578 soundfiler 0;
 #X obj 396 333 array define \$1-\$2;
 #X obj 396 247 \$3;
 #X obj 396 269 * 44.1;
