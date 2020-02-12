@@ -245,7 +245,7 @@
 #X connect 47 0 46 0;
 #X restore 48 158 pd page-select;
 #X text 42 63 Arg2: how many pages;
-#N canvas 929 329 791 628 fill-preset-text 0;
+#N canvas 929 329 791 628 fill-preset-text 1;
 #X obj 31 235 f;
 #X obj 66 235 + 1;
 #X obj 31 158 t a b, f 18;
@@ -322,7 +322,7 @@
 #X connect 39 0 15 0;
 #X restore 47 189 pd fill-preset-text;
 #X text 170 191 <-- activate/deactivate knobs;
-#N canvas 429 208 987 740 text-buffers 1;
+#N canvas 429 208 987 740 text-buffers 0;
 #X text 525 333 <-- say which ones are active;
 #X obj 192 89 loadbang;
 #X obj 187 202 s \$0-loadbang-2;
