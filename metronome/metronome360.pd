@@ -1,4 +1,4 @@
-#N canvas 23 206 1850 763 10;
+#N canvas 94 241 1850 763 10;
 #X obj 321 69 inlet start/stop;
 #X obj 321 91 s \$0-strtStop;
 #X text 38 307 Arg 1: internal bpm on or off;
@@ -91,9 +91,9 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X msg 1310 293 stop;
 #X msg 1310 342 0;
 #X obj 1207 454 s midi-clock-present;
-#X obj 1237 378 + 1;
-#X obj 1207 378 f 0;
-#X obj 1207 400 % 2;
+#X obj 1251 376 + 1;
+#X obj 1207 369 f 0;
+#X obj 1207 391 % 2;
 #X obj 1001 380 spigot 0;
 #X obj 1033 536 * 15;
 #X obj 1033 586 i;
@@ -211,10 +211,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X msg 1436 547 4;
 #X obj 918 309 r midi-start;
 #X msg 918 330 0;
-#X obj 1044 417 + 1;
-#X obj 1001 465 t f f;
-#X obj 1001 442 expr if( $f1 > 23 \, 0 \, $f1);
-#X obj 1001 419 f 0;
+#X obj 1001 443 cg-loop 23;
 #X connect 0 0 1 0;
 #X connect 8 0 81 0;
 #X connect 9 0 10 0;
@@ -246,7 +243,7 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 32 0 33 0;
 #X connect 33 0 34 1;
 #X connect 33 0 30 0;
-#X connect 34 0 104 0;
+#X connect 34 0 101 0;
 #X connect 35 0 36 0;
 #X connect 36 0 37 0;
 #X connect 37 0 64 0;
@@ -310,9 +307,5 @@ midi clock. it doesn't interpolate \, but does ensure we always get
 #X connect 97 1 98 0;
 #X connect 98 0 95 0;
 #X connect 99 0 100 0;
-#X connect 100 0 104 1;
-#X connect 101 0 104 1;
-#X connect 102 0 78 0;
-#X connect 102 1 101 0;
-#X connect 103 0 102 0;
-#X connect 104 0 103 0;
+#X connect 100 0 101 2;
+#X connect 101 0 78 0;
