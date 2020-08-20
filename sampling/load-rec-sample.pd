@@ -44,7 +44,7 @@ with the internal mic on;
 #X connect 18 0 16 0;
 #X restore 252 115 pd peak-trigger;
 #X obj 295 45 r \$0-open-trig;
-#N canvas 221 136 853 578 soundfiler 0;
+#N canvas 221 136 853 578 soundfiler 1;
 #X obj 396 269 * 44.1;
 #X msg 396 321 resize \$1;
 #X obj 39 464 soundfiler;
