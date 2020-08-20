@@ -1,4 +1,4 @@
-#N canvas 615 316 502 664 10;
+#N canvas 170 201 502 664 10;
 #X obj 36 18 inlet;
 #X obj 36 129 list, f 7;
 #X msg 36 100 69;
@@ -16,7 +16,7 @@
 #X obj 36 538 list trim;
 #X obj 36 488 list prepend \$1;
 #X obj 36 462 list prepend \$2;
-#X obj 36 563 s oscOut;
+#X obj 38 564 s oscOut;
 #X obj 36 436 list prepend \$3;
 #X obj 36 389 list prepend 1;
 #X obj 155 388 list prepend 0;
