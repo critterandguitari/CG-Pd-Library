@@ -382,6 +382,12 @@
 #X obj 907 123 i;
 #X obj 218 74 loadbang;
 #X msg 218 95 0;
+#X obj 1017 366 loadbang;
+#X obj 1017 387 f \$3;
+#X obj 972 466 spigot 1;
+#X obj 1017 408 sel 0;
+#X msg 1017 429 0;
+#X text 33 57 Arg 3: Slots on/off (default 1/On);
 #X connect 0 0 45 0;
 #X connect 2 0 13 0;
 #X connect 2 1 5 0;
@@ -395,7 +401,7 @@
 #X connect 3 7 36 0;
 #X connect 3 8 37 0;
 #X connect 3 9 16 0;
-#X connect 3 10 22 0;
+#X connect 3 10 57 0;
 #X connect 6 0 11 1;
 #X connect 7 0 8 0;
 #X connect 11 0 8 0;
@@ -434,3 +440,8 @@
 #X connect 53 0 54 0;
 #X connect 54 0 14 0;
 #X connect 54 0 46 0;
+#X connect 55 0 56 0;
+#X connect 56 0 58 0;
+#X connect 57 0 22 0;
+#X connect 58 0 59 0;
+#X connect 59 0 57 1;
