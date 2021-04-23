@@ -1,6 +1,6 @@
 #N canvas 4 50 1237 849 10;
 #N canvas 4 50 1905 999 states 0;
-#X obj 187 17 inlet;
+#X obj 136 11 inlet;
 #X msg 1346 13 stop;
 #X msg 1287 12 0;
 #X text 1322 14 =;
@@ -10,262 +10,246 @@
 #X text 1322 74 =;
 #X msg 1287 72 2;
 #X msg 1346 73 recenable;
-#X text 125 546 when something is recorded switch the variable to 3
-;
 #X text 1322 104 =;
 #X msg 1286 102 3;
 #X msg 1346 103 record;
-#X text 112 610 latch off is simply in all of these \, eg right outlet
-of select;
-#X obj 129 660 r cg-midi-start;
-#X obj 129 733 t f f, f 17;
-#X obj 129 764 v seq3-\$1-state;
-#X obj 245 764 s seq3-\$1-actions;
-#X obj 129 682 t b;
-#X msg 129 704 1;
-#X obj 379 730 t f f, f 17;
-#X obj 379 764 v seq3-\$1-state;
-#X obj 495 764 s seq3-\$1-actions;
-#X obj 379 682 t b;
-#X obj 379 659 r cg-midi-stop;
-#X msg 379 705 0;
-#X text 533 14 the states controlled by the new shortcut approach;
-#X obj 227 494 v seq3-\$1-state;
-#X obj 254 469 s seq3-\$1-actions;
-#X obj 254 308 v seq3-\$1-state;
-#X msg 226 157 0;
-#X msg 254 377 0;
-#X msg 328 392 1;
-#X obj 328 369 t b;
-#X obj 404 179 v seq3-\$1-state;
-#X obj 404 201 sel 2, f 7;
-#X msg 404 224 0;
-#X obj 450 224 t b;
-#X obj 404 334 v seq3-\$1-state;
-#X obj 432 303 s seq3-\$1-actions;
-#X msg 450 247 2;
-#X text 425 147 if 2 is on turn off \, otherwise turn on 2;
-#X obj 870 591 t b b b, f 22;
-#X msg 887 663 stop;
-#X obj 1156 766 f 0;
-#X msg 1142 647 0;
-#X msg 1175 669 3;
-#X msg 1208 663 6;
-#X msg 945 624 7;
-#X obj 870 693 del 50;
-#X obj 870 526 spigot;
-#X obj 1095 797 f 0;
-#X obj 978 416 r seq3-\$1-actions;
-#X obj 1142 603 r seq3-\$1-actions;
-#X obj 1095 826 s seq3-\$1-led;
-#X obj 679 193 v seq3-\$1-state;
-#X obj 774 251 t b;
-#X obj 679 376 v seq3-\$1-state;
-#X obj 711 356 s seq3-\$1-actions;
-#X obj 679 222 sel 1, f 14;
-#X msg 679 261 1;
-#X msg 774 273 1;
-#X msg 1216 381 0;
-#X msg 1248 403 3;
-#X msg 1285 397 6;
-#X obj 1216 337 r seq3-\$1-actions;
-#X obj 870 449 r beat-clock;
-#X obj 870 471 sel 0;
+#X obj 227 594 v seq3-\$1-state;
+#X obj 254 569 s seq3-\$1-actions;
+#X obj 254 318 v seq3-\$1-state;
+#X msg 254 387 0;
+#X msg 317 399 1;
+#X obj 317 376 t b;
+#X obj 417 310 v seq3-\$1-state;
+#X obj 417 332 sel 2, f 7;
+#X msg 417 355 0;
+#X obj 463 355 t b;
+#X obj 417 465 v seq3-\$1-state;
+#X obj 444 434 s seq3-\$1-actions;
+#X msg 463 378 2;
+#X text 422 296 if 2 is on turn off \, otherwise turn on 2;
+#X obj 870 691 t b b b, f 22;
+#X msg 887 763 stop;
+#X obj 1156 866 f 0;
+#X msg 934 714 7;
+#X obj 870 793 del 50;
+#X obj 870 626 spigot;
+#X obj 1095 897 f 0;
+#X obj 1019 514 r seq3-\$1-actions;
+#X obj 1142 703 r seq3-\$1-actions;
+#X obj 1095 926 s seq3-\$1-led;
+#X obj 686 263 v seq3-\$1-state;
+#X obj 767 321 t b;
+#X obj 686 434 v seq3-\$1-state;
+#X obj 713 411 s seq3-\$1-actions;
+#X obj 686 292 sel 1, f 14;
+#X obj 1216 437 r seq3-\$1-actions;
+#X obj 870 571 sel 0;
 #X text 1322 164 =;
 #X msg 1286 162 5;
 #X msg 1345 162 overdub;
-#X obj 858 154 v seq3-\$1-state;
-#X obj 858 176 sel 5;
-#X msg 858 198 0;
-#X msg 890 220 5;
-#X obj 858 340 v seq3-\$1-state;
-#X obj 890 313 s seq3-\$1-actions;
-#X msg 1308 662 2;
-#X msg 1373 394 2;
-#X obj 870 562 spigot \$2;
-#X obj 930 537 r seq3-\$1-quan;
-#X obj 1292 692 r seq3-\$1-overdub-on;
-#X obj 1292 716 + 1;
-#X obj 1269 743 f;
-#X obj 890 198 t b b;
-#X msg 934 218 0;
-#X obj 226 114 sel 0 1 2 3 4 5 6, f 121;
+#X obj 847 253 v seq3-\$1-state;
+#X obj 847 275 sel 5;
+#X msg 847 297 0;
+#X msg 879 319 5;
+#X obj 847 429 v seq3-\$1-state;
+#X obj 874 402 s seq3-\$1-actions;
+#X obj 870 662 spigot \$2;
+#X obj 921 637 r seq3-\$1-quan;
+#X obj 1304 762 r seq3-\$1-overdub-on;
+#X obj 1304 786 + 1;
+#X obj 1289 810 f;
+#X obj 879 297 t b b;
+#X msg 923 317 0;
 #X text 1322 194 =;
 #X msg 1286 192 6;
 #X msg 1345 192 undo;
-#X text 341 59 0 stops everything \, 1 is play toggle \, 2 is rec enabled
-\, 3 is latch toggle \, 4 play and if playing keep playing \, 5 overdub
-\, 6 undo-request;
-#X obj 1024 343 v seq3-\$1-state;
-#X obj 1056 316 s seq3-\$1-actions;
-#X msg 1024 233 6;
-#X obj 1216 359 sel 0 1 2 3 4 5 6, f 28;
-#X obj 1142 625 sel 0 1 2 3 4 5 6, f 32;
-#X obj 1216 562 s seq3-\$1-led;
-#X obj 1216 537 f;
-#X obj 227 437 t f f;
-#X obj 404 272 t f f;
-#X obj 679 314 t f f;
-#X obj 858 258 t f f;
-#X obj 1024 261 t f f;
-#X text 248 13 Controls State with 0-6;
-#X obj 978 438 sel 0 5 6;
-#X obj 1038 467 t b;
-#X msg 1038 489 1;
-#X msg 998 482 0;
-#X obj 1364 418 r seq3-\$1-overdub-on;
-#X obj 1364 442 + 1;
-#X obj 1341 469 f;
-#X obj 254 333 sel 1 6, f 11;
-#X obj 187 66 route 3;
-#X obj 44 173 t b;
+#X obj 1008 403 v seq3-\$1-state;
+#X obj 1035 376 s seq3-\$1-actions;
+#X obj 1216 662 s seq3-\$1-led;
+#X obj 1216 637 f;
+#X obj 227 537 t f f;
+#X obj 417 403 t f f;
+#X obj 686 384 t f f;
+#X obj 847 357 t f f;
+#X obj 1008 331 t f f;
+#X obj 1019 536 sel 0 5 6;
+#X obj 1070 565 t b;
+#X msg 1070 587 1;
+#X obj 1355 516 r seq3-\$1-overdub-on;
+#X obj 1355 540 + 1;
+#X obj 1340 568 f;
+#X obj 254 343 sel 1 6, f 11;
 #X text 1289 137 latch seperate now;
-#X obj 76 302 s seq3-\$1-togLatch;
-#X obj 44 207 f 0;
-#X obj 76 207 + 1;
-#X obj 681 444 r seq3-\$1-togLatch;
-#X msg 697 647 stop;
-#X obj 744 728 s seq3-\$1-led;
-#X obj 680 677 del 178;
-#X obj 680 537 sel 1 0, f 10;
-#X obj 680 585 t b f b, f 22;
-#X msg 680 558 4;
-#X msg 708 558 1;
-#X obj 257 37 loadbang;
-#X obj 681 465 t b f;
-#X obj 680 511 spigot 0;
-#X msg 681 486 1;
-#X obj 76 228 == 1;
-#X obj 257 58 t b;
-#X msg 257 79 0;
+#X obj 76 402 s seq3-\$1-togLatch;
+#X obj 44 307 f 0;
+#X obj 76 307 + 1;
+#X obj 681 544 r seq3-\$1-togLatch;
+#X msg 697 747 stop;
+#X obj 744 828 s seq3-\$1-led;
+#X obj 680 777 del 178;
+#X obj 680 637 sel 1 0, f 10;
+#X obj 680 685 t b f b, f 22;
+#X msg 680 658 4;
+#X msg 708 658 1;
+#X obj 681 565 t b f;
+#X obj 680 611 spigot 0;
+#X msg 681 586 1;
+#X obj 76 328 == 1;
+#X obj 27 31 t b;
+#X obj 27 10 r seq3-\$1-init;
+#X msg 27 52 stop;
+#X obj 175 232 t b;
+#X obj 175 253 f 0;
+#X obj 307 253 t b;
+#X obj 417 275 t b;
+#X obj 1143 780 f 0;
+#X obj 1143 801 t a a;
+#X obj 1216 505 f 0;
+#X obj 1257 504 f 3;
+#X obj 1299 510 f 6;
+#X obj 1217 464 sel 0 1 2 3, f 27;
+#X obj 1142 725 sel 0 1 2 3, f 32;
+#X obj 1190 764 f 3;
+#X obj 1239 761 f 6;
+#X obj 870 546 r \$0-beat-clock-local;
+#X obj 1019 571 f 0;
+#X obj 44 190 route latch stop play record continue overdub undo,
+f 188;
+#X obj 686 231 t b;
+#X obj 847 226 t b;
+#X obj 1008 238 t b;
+#X obj 1008 259 f 6;
+#X text 341 17 latch: toggle the latch feature;
+#X text 339 35 stop: stops everything;
+#X text 345 68 record: enable the record phase \, waits for input;
+#X text 344 86 continue: plays \, and plays if still playing \, doesnt
+toggle;
+#X text 341 51 play: the play toggle;
+#X obj 686 313 f 1;
+#X obj 767 342 f 1;
+#X text 352 108 overdub: start the overdub process;
+#X text 357 125 undo: revert back to the last recorded sequence;
 #X connect 0 0 113 0;
-#X connect 15 0 19 0;
-#X connect 16 0 17 0;
-#X connect 16 1 18 0;
+#X connect 15 0 78 0;
+#X connect 16 0 67 0;
+#X connect 17 0 67 0;
+#X connect 18 0 17 0;
 #X connect 19 0 20 0;
-#X connect 20 0 16 0;
-#X connect 21 0 22 0;
-#X connect 21 1 23 0;
-#X connect 24 0 26 0;
-#X connect 25 0 24 0;
-#X connect 26 0 21 0;
-#X connect 30 0 112 0;
-#X connect 31 0 99 0;
-#X connect 32 0 99 0;
-#X connect 33 0 99 0;
-#X connect 34 0 33 0;
-#X connect 35 0 36 0;
-#X connect 36 0 37 0;
-#X connect 36 1 38 0;
-#X connect 37 0 100 0;
-#X connect 38 0 41 0;
-#X connect 41 0 100 0;
-#X connect 43 0 50 0;
-#X connect 43 1 49 0;
-#X connect 43 2 44 0;
-#X connect 44 0 50 0;
-#X connect 45 0 52 0;
-#X connect 46 0 45 1;
-#X connect 46 0 52 0;
-#X connect 47 0 45 1;
-#X connect 48 0 45 1;
-#X connect 49 0 52 0;
-#X connect 50 0 45 0;
-#X connect 51 0 80 0;
-#X connect 52 0 55 0;
-#X connect 53 0 105 0;
-#X connect 54 0 96 0;
-#X connect 56 0 60 0;
-#X connect 57 0 62 0;
-#X connect 60 0 61 0;
-#X connect 60 1 57 0;
-#X connect 61 0 101 0;
-#X connect 62 0 101 0;
-#X connect 63 0 98 0;
-#X connect 64 0 98 0;
-#X connect 65 0 98 0;
-#X connect 66 0 95 0;
-#X connect 67 0 68 0;
-#X connect 68 0 51 0;
-#X connect 72 0 73 0;
+#X connect 20 0 21 0;
+#X connect 20 1 22 0;
+#X connect 21 0 68 0;
+#X connect 22 0 25 0;
+#X connect 25 0 68 0;
+#X connect 27 0 31 0;
+#X connect 27 1 30 0;
+#X connect 27 2 28 0;
+#X connect 28 0 31 0;
+#X connect 29 0 33 0;
+#X connect 30 0 33 0;
+#X connect 31 0 29 0;
+#X connect 32 0 53 0;
+#X connect 33 0 36 0;
+#X connect 34 0 72 0;
+#X connect 35 0 108 0;
+#X connect 37 0 41 0;
+#X connect 38 0 124 0;
+#X connect 41 0 123 0;
+#X connect 41 1 38 0;
+#X connect 42 0 107 0;
+#X connect 43 0 32 0;
+#X connect 47 0 48 0;
+#X connect 48 0 49 0;
+#X connect 48 1 58 0;
+#X connect 49 0 70 0;
+#X connect 50 0 70 0;
+#X connect 53 0 27 0;
+#X connect 54 0 53 1;
+#X connect 55 0 56 0;
+#X connect 56 0 57 1;
+#X connect 57 0 29 1;
+#X connect 58 0 50 0;
+#X connect 58 1 59 0;
+#X connect 59 0 70 0;
+#X connect 66 0 65 0;
+#X connect 67 0 13 0;
+#X connect 67 1 14 0;
+#X connect 68 0 23 0;
+#X connect 68 1 24 0;
+#X connect 69 0 39 0;
+#X connect 69 1 40 0;
+#X connect 70 0 51 0;
+#X connect 70 1 52 0;
+#X connect 71 0 63 0;
+#X connect 71 1 64 0;
+#X connect 72 0 112 0;
+#X connect 72 1 112 0;
+#X connect 72 2 112 0;
+#X connect 72 3 73 0;
 #X connect 73 0 74 0;
-#X connect 73 1 85 0;
-#X connect 74 0 102 0;
-#X connect 75 0 102 0;
-#X connect 78 0 45 1;
-#X connect 79 0 98 0;
-#X connect 80 0 43 0;
-#X connect 81 0 80 1;
-#X connect 82 0 83 0;
-#X connect 83 0 84 1;
-#X connect 84 0 45 1;
-#X connect 85 0 75 0;
-#X connect 85 1 86 0;
-#X connect 86 0 102 0;
-#X connect 87 0 31 0;
-#X connect 87 1 30 0;
-#X connect 87 2 35 0;
-#X connect 87 4 56 0;
-#X connect 87 5 72 0;
-#X connect 87 6 94 0;
-#X connect 94 0 103 0;
-#X connect 95 0 63 0;
-#X connect 95 1 64 0;
-#X connect 95 2 65 0;
-#X connect 95 3 111 0;
-#X connect 96 0 46 0;
-#X connect 96 1 47 0;
-#X connect 96 2 48 0;
-#X connect 96 3 84 0;
-#X connect 98 0 97 0;
-#X connect 99 0 28 0;
-#X connect 99 1 29 0;
-#X connect 100 0 39 0;
-#X connect 100 1 40 0;
-#X connect 101 0 58 0;
-#X connect 101 1 59 0;
-#X connect 102 0 76 0;
-#X connect 102 1 77 0;
-#X connect 103 0 92 0;
-#X connect 103 1 93 0;
-#X connect 105 0 108 0;
-#X connect 105 1 108 0;
-#X connect 105 2 108 0;
-#X connect 105 3 106 0;
-#X connect 106 0 107 0;
-#X connect 107 0 51 1;
-#X connect 108 0 51 1;
-#X connect 109 0 110 0;
-#X connect 110 0 111 1;
-#X connect 111 0 98 0;
-#X connect 112 0 32 0;
-#X connect 112 1 32 0;
-#X connect 112 2 34 0;
-#X connect 113 0 114 0;
-#X connect 113 1 87 0;
-#X connect 114 0 117 0;
-#X connect 117 0 118 0;
-#X connect 118 0 131 0;
-#X connect 119 0 128 0;
-#X connect 120 0 122 0;
-#X connect 122 0 45 0;
-#X connect 123 0 125 0;
-#X connect 123 1 126 0;
-#X connect 124 0 122 0;
-#X connect 124 1 121 0;
-#X connect 124 2 120 0;
-#X connect 125 0 124 0;
-#X connect 126 0 124 0;
-#X connect 127 0 132 0;
-#X connect 128 0 130 0;
-#X connect 128 1 129 0;
-#X connect 129 0 123 0;
-#X connect 130 0 129 1;
-#X connect 131 0 116 0;
-#X connect 131 0 117 1;
-#X connect 132 0 133 0;
-#X connect 133 0 87 0;
-#X restore 463 97 pd states;
+#X connect 74 0 32 1;
+#X connect 75 0 76 0;
+#X connect 76 0 77 1;
+#X connect 77 0 66 0;
+#X connect 78 0 16 0;
+#X connect 78 1 16 0;
+#X connect 78 2 18 0;
+#X connect 81 0 82 0;
+#X connect 82 0 94 0;
+#X connect 83 0 91 0;
+#X connect 84 0 86 0;
+#X connect 86 0 29 0;
+#X connect 87 0 89 0;
+#X connect 87 1 90 0;
+#X connect 88 0 86 0;
+#X connect 88 1 85 0;
+#X connect 88 2 84 0;
+#X connect 89 0 88 0;
+#X connect 90 0 88 0;
+#X connect 91 0 93 0;
+#X connect 91 1 92 0;
+#X connect 92 0 87 0;
+#X connect 93 0 92 1;
+#X connect 94 0 80 0;
+#X connect 94 0 81 1;
+#X connect 95 0 97 0;
+#X connect 96 0 95 0;
+#X connect 97 0 113 0;
+#X connect 98 0 99 0;
+#X connect 99 0 67 0;
+#X connect 100 0 15 0;
+#X connect 101 0 19 0;
+#X connect 102 0 103 0;
+#X connect 103 0 33 0;
+#X connect 103 1 29 1;
+#X connect 104 0 66 0;
+#X connect 105 0 66 0;
+#X connect 106 0 66 0;
+#X connect 107 0 104 0;
+#X connect 107 1 105 0;
+#X connect 107 2 106 0;
+#X connect 107 3 77 0;
+#X connect 108 0 102 0;
+#X connect 108 1 109 0;
+#X connect 108 2 110 0;
+#X connect 108 3 57 0;
+#X connect 109 0 29 1;
+#X connect 110 0 29 1;
+#X connect 111 0 43 0;
+#X connect 112 0 32 1;
+#X connect 113 0 81 0;
+#X connect 113 1 98 0;
+#X connect 113 2 100 0;
+#X connect 113 3 101 0;
+#X connect 113 4 114 0;
+#X connect 113 5 115 0;
+#X connect 113 6 116 0;
+#X connect 114 0 37 0;
+#X connect 115 0 47 0;
+#X connect 116 0 117 0;
+#X connect 117 0 71 0;
+#X connect 123 0 69 0;
+#X connect 124 0 69 0;
+#X restore 555 130 pd states;
 #X obj 87 146 t a a;
 #N canvas 9 50 1183 836 countem 0;
 #X obj 443 416 s seq3-\$1-count-notes;
@@ -295,26 +279,22 @@ of select;
 #X connect 10 0 6 0;
 #X restore 114 171 pd countem;
 #X obj 114 269 s \$0-pass;
-#X obj 393 590 r seq3-\$1-actions;
-#X floatatom 393 612 5 0 0 0 - - -;
-#X text 447 120 state control;
+#X text 619 133 state control;
 #X text 206 170 count the incoming notes;
 #X text 128 254 incoming notes get passed to the outlet;
-#X text 376 575 heads up display of states;
-#X obj 517 340 loadbang;
 #X obj 87 317 seq-format-event note;
 #X text 453 479 round seq length to multiple of beats;
 #X obj 87 399 s \$0-events-in;
 #X obj 438 393 f \$2;
 #X obj 438 528 s \$0-arg-2-seq;
 #X text 448 209 arg 2: 0 no sync \, 1 sync;
-#X text 655 426 loop or not;
-#X msg 536 427 0 loop 1 \, 1 loop 1;
+#X text 667 441 loop or not;
+#X msg 548 442 0 loop 1 \, 1 loop 1;
 #X msg 438 499 0 quantize-length \$1 \, 1 quantize-length \$1;
 #N canvas 326 50 1155 609 overdub 0;
 #X obj 223 31 r seq3-\$1-actions;
 #X text 243 4 overdub;
-#N canvas 23 50 739 692 countdown 0;
+#N canvas 23 50 741 692 countdown 0;
 #X obj 260 44 inlet;
 #X obj 210 237 f;
 #X obj 254 256 + 1;
@@ -427,11 +407,11 @@ of select;
 #X obj 870 397 f;
 #X obj 870 441 s \$0-arg-2-seq;
 #X msg 870 419 \$1 stop;
-#X obj 507 170 loadbang;
 #X msg 507 192 0;
 #X obj 425 28 inlet;
 #X obj 223 454 s \$0-play-local;
 #X obj 829 216 r cgSc-\$4-aux;
+#X obj 507 170 r seq3-\$1-init;
 #X connect 0 0 12 0;
 #X connect 2 0 24 0;
 #X connect 3 0 5 0;
@@ -453,7 +433,7 @@ of select;
 #X connect 19 0 20 0;
 #X connect 19 0 34 1;
 #X connect 20 0 21 0;
-#X connect 24 0 40 0;
+#X connect 24 0 39 0;
 #X connect 24 1 3 0;
 #X connect 24 2 11 0;
 #X connect 24 3 18 0;
@@ -472,10 +452,10 @@ of select;
 #X connect 33 1 34 0;
 #X connect 34 0 36 0;
 #X connect 36 0 35 0;
-#X connect 37 0 38 0;
-#X connect 38 0 17 0;
-#X connect 39 0 2 1;
-#X connect 41 0 32 0;
+#X connect 37 0 17 0;
+#X connect 38 0 2 1;
+#X connect 40 0 32 0;
+#X connect 41 0 37 0;
 #X restore 864 448 pd overdub;
 #X obj 87 243 t a a;
 #X obj 384 347 r seq3-\$1-quan;
@@ -488,11 +468,8 @@ of select;
 #X obj 46 166 r \$0-current-slot;
 #X obj 31 204 f;
 #X obj 284 210 array define \$0-slot-tracker 14;
-#X obj 284 24 loadbang;
-#X obj 297 126 r saveState;
 #X obj 189 341 tabread \$0-slot-tracker;
 #X text 335 337 get current toggle;
-#X obj 189 383 ==;
 #X text 221 383 switch it;
 #X obj 189 405 t f f, f 11;
 #X obj 252 451 tabwrite \$0-slot-tracker;
@@ -508,8 +485,6 @@ of select;
 #X obj 660 409 v seq3-\$1-od;
 #X obj 606 78 r \$0-current-slot;
 #X obj 591 107 f;
-#X obj 591 52 inlet read-bang;
-#X obj 31 39 inlet write-bang;
 #X obj 284 46 symbol \$3;
 #X msg 284 86 read \$1/slot-tracker.txt;
 #X msg 297 182 write \$1/slot-tracker.txt;
@@ -520,112 +495,55 @@ of select;
 #X obj 591 226 * 2;
 #X obj 31 466 list prepend write;
 #X obj 591 330 list prepend read;
+#X obj 284 24 r seq3-\$1-init;
+#X obj 189 383 == 0;
+#X obj 32 39 inlet;
+#X text 70 38 write-bang;
+#X obj 591 52 inlet;
+#X text 634 49 read-bang;
+#X obj 297 126 r \$0-save-current;
 #X connect 1 0 2 1;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
 #X connect 4 0 2 0;
 #X connect 4 1 1 0;
 #X connect 5 0 6 1;
-#X connect 6 0 18 0;
-#X connect 8 0 30 0;
-#X connect 9 0 33 0;
-#X connect 10 0 12 0;
-#X connect 12 0 14 0;
-#X connect 14 0 35 1;
-#X connect 14 1 15 0;
-#X connect 16 0 10 0;
-#X connect 16 1 15 1;
-#X connect 18 0 34 0;
-#X connect 18 1 16 0;
-#X connect 20 0 21 0;
-#X connect 21 0 19 0;
-#X connect 22 0 20 0;
-#X connect 22 1 25 0;
-#X connect 23 0 36 1;
-#X connect 24 0 37 0;
-#X connect 24 1 23 0;
-#X connect 25 0 20 1;
-#X connect 26 0 27 1;
-#X connect 27 0 24 0;
+#X connect 6 0 15 0;
+#X connect 8 0 36 0;
+#X connect 11 0 30 1;
+#X connect 11 1 12 0;
+#X connect 13 0 8 0;
+#X connect 13 1 12 1;
+#X connect 15 0 29 0;
+#X connect 15 1 13 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 19 0 17 0;
+#X connect 19 1 22 0;
+#X connect 20 0 31 1;
+#X connect 21 0 32 0;
+#X connect 21 1 20 0;
+#X connect 22 0 17 1;
+#X connect 23 0 24 1;
+#X connect 24 0 21 0;
+#X connect 25 0 26 0;
+#X connect 26 0 7 0;
+#X connect 27 0 7 0;
 #X connect 28 0 27 0;
-#X connect 29 0 6 0;
-#X connect 30 0 31 0;
-#X connect 31 0 7 0;
-#X connect 32 0 7 0;
-#X connect 33 0 32 0;
-#X connect 34 0 35 0;
-#X connect 35 0 38 0;
-#X connect 36 0 39 0;
-#X connect 37 0 36 0;
-#X connect 38 0 4 0;
-#X connect 39 0 22 0;
+#X connect 29 0 30 0;
+#X connect 30 0 33 0;
+#X connect 31 0 34 0;
+#X connect 32 0 31 0;
+#X connect 33 0 4 0;
+#X connect 34 0 19 0;
+#X connect 35 0 25 0;
+#X connect 36 0 11 0;
+#X connect 37 0 6 0;
+#X connect 39 0 24 0;
+#X connect 41 0 28 0;
 #X restore 77 639 pd save-the-txts;
-#N canvas 109 134 1108 695 change-and-load-slot 0;
-#X obj 164 38 inlet;
-#X obj 164 526 sel 1, f 31;
-#X obj 543 308 s \$0-current-slot;
-#X obj 164 78 change -1;
-#X msg 347 585 0;
-#X text 556 288 change the slot number;
-#X obj 290 356 s \$0-read-current;
-#X text 330 336 open new slot;
-#X text 191 506 if playing \, play;
-#X obj 347 657 v seq3-\$1-state;
-#X obj 374 632 s seq3-\$1-actions;
-#X obj 347 610 t f f;
-#X obj 923 322 v seq3-\$1-state;
-#X obj 164 504 f;
-#X text 865 301 get the state before turning off;
-#X obj 164 172 t b b b f b b b, f 127;
-#X obj 670 267 s \$0-save-current;
-#X text 324 16 if a port is changed and a rec happens save \, if no
-change to .txt than dont save;
-#X obj 715 50 r seq3-\$1-actions;
-#X obj 670 219 spigot 0;
-#X msg 743 222 0;
-#X msg 715 139 1;
-#X obj 670 241 t b b;
-#X obj 164 641 s \$0-play-local;
-#X obj 191 601 v seq3-\$1-state;
-#X msg 191 574 1;
-#X obj 164 548 t b b;
-#X obj 796 244 s \$0-stop-local;
-#X obj 347 548 t b;
-#X obj 715 72 sel 3 5 6;
-#X obj 749 117 s \$0-save-current;
-#X obj 749 96 del 50;
-#X connect 0 0 3 0;
-#X connect 1 0 26 0;
-#X connect 1 1 28 0;
-#X connect 3 0 15 0;
-#X connect 4 0 11 0;
-#X connect 11 0 9 0;
-#X connect 11 1 10 0;
-#X connect 12 0 13 1;
-#X connect 13 0 1 0;
-#X connect 15 0 13 0;
-#X connect 15 1 6 0;
-#X connect 15 3 2 0;
-#X connect 15 4 19 0;
-#X connect 15 5 27 0;
-#X connect 15 6 12 0;
-#X connect 18 0 29 0;
-#X connect 19 0 22 0;
-#X connect 20 0 19 1;
-#X connect 21 0 19 1;
-#X connect 22 0 16 0;
-#X connect 22 1 20 0;
-#X connect 25 0 24 0;
-#X connect 26 0 23 0;
-#X connect 26 1 25 0;
-#X connect 28 0 4 0;
-#X connect 29 0 21 0;
-#X connect 29 1 21 0;
-#X connect 29 2 31 0;
-#X connect 31 0 30 0;
-#X restore 601 134 pd change-and-load-slot;
 #X text 448 229 arg 3: path to folder where to save 28 textfiles;
-#N canvas 39 50 1159 834 THE-2-SEQS 0;
+#N canvas 574 155 1155 834 THE-2-SEQS 0;
 #X obj 398 730 outlet;
 #N canvas 14 50 468 388 flush-stuck-notes 0;
 #X obj 167 212 bag;
@@ -856,10 +774,6 @@ change to .txt than dont save;
 #X obj 437 359 s seq3-\$1-playing;
 #X obj 828 346 sel end rec isPlaying, f 34;
 #X obj 962 378 s seq3-\$1-playing;
-#X obj 443 512 loadbang;
-#X obj 443 533 f \$5;
-#X obj 398 581 spigot 1;
-#X obj 443 554 ==;
 #N canvas 13 50 476 382 latch 0;
 #X text 191 93 THE LATCH!;
 #X obj 137 58 inlet;
@@ -926,14 +840,12 @@ directly to output if disabled;
 #X connect 10 1 3 0;
 #X connect 10 2 9 0;
 #X restore 137 273 pd latch-notes;
-#X obj 186 182 r seq3-\$1-togLatch;
+#X obj 218 232 r seq3-\$1-togLatch;
 #X connect 1 0 3 0;
 #X connect 3 0 2 0;
 #X connect 4 0 3 1;
 #X restore 398 657 pd latch;
 #X text 475 659 latch incoming notes;
-#X obj 597 288 seq seq\$1R 1, f 26;
-#X obj 132 269 seq seq\$1L 1, f 25;
 #X obj 132 67 t a a, f 51;
 #N canvas 4 50 1912 998 knob-recycle 0;
 #X obj 35 19 inlet;
@@ -1058,59 +970,59 @@ directly to output if disabled;
 #X restore 713 392 pd knob-recycle;
 #X obj 398 678 list prepend notes;
 #X obj 398 699 list trim;
+#X obj 398 581 spigot \$5;
+#X obj 597 288 seq seq-\$1-R \$1, f 26;
+#X obj 132 268 seq seq-\$1-L \$1, f 25;
 #X connect 1 0 9 0;
 #X connect 1 1 29 0;
-#X connect 3 0 43 0;
+#X connect 3 0 47 0;
 #X connect 6 0 34 0;
 #X connect 7 0 37 0;
 #X connect 8 0 24 0;
-#X connect 9 0 45 0;
+#X connect 9 0 41 0;
 #X connect 9 1 8 0;
 #X connect 10 0 22 0;
-#X connect 10 1 50 0;
+#X connect 10 1 44 0;
 #X connect 14 0 35 0;
 #X connect 15 0 39 0;
 #X connect 16 0 18 0;
-#X connect 17 0 47 1;
-#X connect 18 0 47 2;
-#X connect 19 0 48 1;
-#X connect 20 0 48 2;
+#X connect 17 0 48 1;
+#X connect 18 0 48 2;
+#X connect 19 0 49 1;
+#X connect 20 0 49 2;
 #X connect 21 0 23 0;
-#X connect 22 0 45 0;
+#X connect 22 0 41 0;
 #X connect 22 1 21 0;
 #X connect 25 0 0 0;
 #X connect 25 1 26 0;
 #X connect 27 0 0 0;
 #X connect 27 1 28 0;
 #X connect 29 0 25 0;
-#X connect 30 0 48 1;
+#X connect 30 0 49 1;
 #X connect 31 0 20 0;
-#X connect 32 0 47 1;
+#X connect 32 0 48 1;
 #X connect 34 0 4 0;
 #X connect 34 1 5 0;
 #X connect 35 0 12 0;
 #X connect 35 1 13 0;
-#X connect 36 0 49 0;
+#X connect 36 0 43 0;
 #X connect 37 1 6 0;
 #X connect 37 2 38 0;
 #X connect 39 1 14 0;
 #X connect 39 2 40 0;
-#X connect 41 0 42 0;
-#X connect 42 0 44 0;
-#X connect 43 0 45 0;
-#X connect 44 0 43 1;
-#X connect 45 0 51 0;
-#X connect 47 0 10 0;
-#X connect 47 1 10 1;
-#X connect 47 1 15 0;
-#X connect 48 0 1 0;
-#X connect 48 1 1 1;
-#X connect 48 1 7 0;
-#X connect 49 0 48 0;
-#X connect 49 1 47 0;
-#X connect 50 0 27 0;
-#X connect 51 0 52 0;
-#X connect 52 0 0 0;
+#X connect 41 0 45 0;
+#X connect 43 0 49 0;
+#X connect 43 1 48 0;
+#X connect 44 0 27 0;
+#X connect 45 0 46 0;
+#X connect 46 0 0 0;
+#X connect 47 0 41 0;
+#X connect 48 0 10 0;
+#X connect 48 1 10 1;
+#X connect 48 1 15 0;
+#X connect 49 0 1 0;
+#X connect 49 1 1 1;
+#X connect 49 1 7 0;
 #X restore 837 480 pd THE-2-SEQS;
 #X obj 837 653 outlet;
 #N canvas 214 62 1220 815 undo 0;
@@ -1305,7 +1217,6 @@ directly to output if disabled;
 #X obj 358 360 spigot;
 #X obj 436 359 spigot;
 #X text 502 274 lock start to beat;
-#X obj 475 108 loadbang;
 #X obj 436 325 ==;
 #X obj 475 192 sel 0 1 2, f 28;
 #X msg 475 214 0;
@@ -1327,47 +1238,42 @@ or y);
 #X msg 358 388 play;
 #X msg 436 387 play-sync;
 #X obj 102 233 r \$0-stop-local;
-#X connect 0 0 5 0;
+#X obj 474 108 r seq3-\$1-init;
+#X connect 0 0 4 0;
 #X connect 0 0 2 1;
-#X connect 1 0 22 0;
-#X connect 2 0 23 0;
-#X connect 4 0 9 0;
-#X connect 5 0 1 1;
-#X connect 6 0 7 0;
-#X connect 6 1 8 0;
-#X connect 6 2 8 0;
+#X connect 1 0 21 0;
+#X connect 2 0 22 0;
+#X connect 4 0 1 1;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 7 0;
+#X connect 6 0 0 0;
 #X connect 7 0 0 0;
-#X connect 8 0 0 0;
-#X connect 9 0 6 0;
-#X connect 11 0 13 0;
-#X connect 11 1 12 0;
-#X connect 12 0 13 1;
-#X connect 13 0 14 0;
-#X connect 14 0 10 0;
-#X connect 15 0 6 0;
-#X connect 16 0 10 0;
-#X connect 17 0 16 0;
-#X connect 17 1 20 0;
-#X connect 19 0 17 0;
-#X connect 20 0 1 0;
-#X connect 20 1 2 0;
-#X connect 21 0 20 0;
-#X connect 22 0 11 0;
-#X connect 23 0 11 0;
-#X connect 24 0 16 0;
+#X connect 8 0 5 0;
+#X connect 10 0 12 0;
+#X connect 10 1 11 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
+#X connect 14 0 5 0;
+#X connect 15 0 9 0;
+#X connect 16 0 15 0;
+#X connect 16 1 19 0;
+#X connect 18 0 16 0;
+#X connect 19 0 1 0;
+#X connect 19 1 2 0;
+#X connect 20 0 19 0;
+#X connect 21 0 10 0;
+#X connect 22 0 10 0;
+#X connect 23 0 15 0;
+#X connect 24 0 8 0;
 #X restore 850 277 pd play+stop;
-#X obj 65 458 r saveState;
 #X obj 859 154 s \$0-beat-clock-local;
 #X obj 837 387 r \$0-beat-clock-local;
 #X obj 837 419 t f f;
 #X text 449 190 arg 1: unique number;
 #X text 448 249 arg 4: number to match shortcut (cgSc);
-#X text 452 272 arg 5: pass through mute? 0: on. 1: off (default 0)
-;
-#X msg 1110 530 0;
-#X obj 1110 558 s midiOutGate;
-#X obj 1110 469 loadbang;
-#X text 469 301 arg 6 midi out on/off;
+#X text 459 298 arg 6 midi out on/off;
 #N canvas 775 133 699 435 new-save-read-function 0;
 #X obj 55 73 r \$0-read-text;
 #X obj 55 115 symbol \$3;
@@ -1376,12 +1282,8 @@ or y);
 #X obj 226 94 t b b, f 14;
 #X obj 355 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 307 115 f \$1;
 #X msg 226 182 write \$1/bigtext\$2.txt;
-#X obj 226 156 pack s 0;
-#X obj 136 115 f \$1;
 #X msg 55 177 read \$1/bigtext\$2.txt;
-#X obj 55 156 pack s 0;
 #X msg 214 212 clear;
 #X obj 55 252 text define -k seq3-\$1-big-text;
 #A set 0 length 479 \\\; 0 note 71 100 \\\; 2 note 72 100 \\\; 26 note
@@ -1389,153 +1291,257 @@ or y);
 144 note 62 0 \\\; 206 note 60 0 \\\; 225 note 62 100 \\\; 241 note
 67 100 \\\; 278 note 60 100 \\\; 281 note 62 0 \\\; 334 note 60 0 \\\;
 341 note 62 100 \\\; 358 note 69 100 \\\; 361 note 67 0 \\\; 380 note
-62 0 \\\; 421 note 69 0 \\\; \; 2 \; 3 \; 0 length 677 \\\; 0 note
-67 100 \\\; 15 note 71 100 \\\; 43 note 67 0 \\\; 86 note 67 100 \\\;
-123 note 64 100 \\\; 133 note 71 0 \\\; 161 note 67 0 \\\; 222 note
-62 100 \\\; 236 note 64 0 \\\; 316 note 71 100 \\\; 348 note 62 0 \\\;
-380 note 67 100 \\\; 386 note 71 0 \\\; 400 note 64 100 \\\; 417 note
-67 0 \\\; 488 note 62 100 \\\; 500 note 60 100 \\\; 502 note 64 0 \\\;
-562 note 62 0 \\\; 582 note 67 100 \\\; 587 note 60 0 \\\; 656 note
-67 0 \\\; \; 0 length 942 \\\; 0 note 72 100 \\\; 112 note 69 100 \\\;
-121 note 72 0 \\\; 170 note 69 0 \\\; 221 note 64 100 \\\; 333 note
-60 100 \\\; 364 note 64 0 \\\; 446 note 64 100 \\\; 485 note 60 0 \\\;
-523 note 64 0 \\\; 561 note 67 100 \\\; 677 note 67 0 \\\; 678 note
-68 100 \\\; 800 note 68 0 \\\; 809 note 69 100 \\\; 934 note 69 0 \\\;
-\; 6 \; 0 length 870 \\\; 0 note 71 100 \\\; 96 note 69 100 \\\; 103
-note 71 0 \\\; 152 note 69 0 \\\; 191 note 64 100 \\\; 291 note 64
-0 \\\; 307 note 60 100 \\\; 400 note 67 100 \\\; 403 note 60 0 \\\;
+62 0 \\\; 421 note 69 0 \\\; \; 2 \; 3 \; 0 length 265 \\\; 0 note
+77 100 \\\; 114 note 74 100 \\\; 153 note 77 0 \\\; 228 note 74 0 \\\;
+249 note 67 100 \\\; 3 note 64 100 \\\; 39 note 67 0 \\\; 152 note
+60 100 \\\; 313 note 64 0 \\\; 339 note 60 0 \\\; 16 note 71 100 \\\;
+77 note 74 100 \\\; 182 note 71 0 \\\; 202 note 74 0 \\\; \; 0 length
+942 \\\; 0 note 72 100 \\\; 112 note 69 100 \\\; 121 note 72 0 \\\;
+170 note 69 0 \\\; 221 note 64 100 \\\; 333 note 60 100 \\\; 364 note
+64 0 \\\; 446 note 64 100 \\\; 485 note 60 0 \\\; 523 note 64 0 \\\;
+561 note 67 100 \\\; 677 note 67 0 \\\; 678 note 68 100 \\\; 800 note
+68 0 \\\; 809 note 69 100 \\\; 934 note 69 0 \\\; \; 6 \; 0 length
+870 \\\; 0 note 71 100 \\\; 96 note 69 100 \\\; 103 note 71 0 \\\;
+152 note 69 0 \\\; 191 note 64 100 \\\; 291 note 64 0 \\\; 307 note
+60 100 \\\; 400 note 67 100 \\\; 403 note 60 0 \\\; 441 note 67 0 \\\;
+507 note 64 100 \\\; 586 note 64 0 \\\; 710 note 76 100 \\\; 755 note
+76 0 \\\; \; 0 length 870 \\\; 0 note 71 100 \\\; 96 note 69 100 \\\;
+103 note 71 0 \\\; 152 note 69 0 \\\; 191 note 64 100 \\\; 291 note
+64 0 \\\; 307 note 60 100 \\\; 400 note 67 100 \\\; 403 note 60 0 \\\;
 441 note 67 0 \\\; 507 note 64 100 \\\; 586 note 64 0 \\\; 710 note
-76 100 \\\; 755 note 76 0 \\\; \; 0 length 870 \\\; 0 note 71 100 \\\;
-96 note 69 100 \\\; 103 note 71 0 \\\; 152 note 69 0 \\\; 191 note
-64 100 \\\; 291 note 64 0 \\\; 307 note 60 100 \\\; 400 note 67 100
-\\\; 403 note 60 0 \\\; 441 note 67 0 \\\; 507 note 64 100 \\\; 586
-note 64 0 \\\; 710 note 76 100 \\\; 755 note 76 0 \\\; \; 9 \; 0 length
-399 \\\; 0 note 74 100 \\\; 25 note 74 0 \\\; 32 note 71 100 \\\; 103
-note 71 0 \\\; 129 note 74 100 \\\; 159 note 71 100 \\\; 197 note 74
-0 \\\; 210 note 64 100 \\\; 238 note 71 0 \\\; 267 note 60 100 \\\;
-286 note 64 0 \\\; 312 note 60 0 \\\; \; 0 length 552 \\\; 0 note 74
-100 \\\; 60 note 74 0 \\\; 149 note 64 100 \\\; 248 note 60 100 \\\;
-259 note 64 0 \\\; 348 note 60 0 \\\; 378 note 72 100 \\\; 438 note
-76 100 \\\; 447 note 72 0 \\\; 500 note 76 0 \\\; \; 12 \; 0 length
-509 \\\; 0 note 77 100 \\\; 19 note 71 100 \\\; 47 note 77 0 \\\; 112
-note 71 0 \\\; 119 note 65 100 \\\; 200 note 64 100 \\\; 226 note 65
-0 \\\; 251 note 60 100 \\\; 305 note 65 100 \\\; 317 note 64 0 \\\;
-326 note 77 100 \\\; 335 note 60 0 \\\; 368 note 74 100 \\\; 382 note
-65 0 \\\; 386 note 71 100 \\\; 488 note 74 0 \\\; 499 note 77 0 \\\;
-501 note 71 0 \\\; \; 14 \; 15 \; 0 length 641 \\\; 0 note 76 100 \\\;
-94 note 76 0 \\\; 99 note 74 100 \\\; 132 note 74 0 \\\; 171 note 64
-100 \\\; 248 note 62 100 \\\; 262 note 64 0 \\\; 340 note 62 0 \\\;
-369 note 79 100 \\\; 431 note 79 0 \\\; \; 0 length 662 \\\; 0 note
-74 100 \\\; 55 note 74 0 \\\; 146 note 60 100 \\\; 238 note 60 0 \\\;
-249 note 72 100 \\\; 289 note 72 0 \\\; 327 note 64 100 \\\; 423 note
-60 100 \\\; 436 note 64 0 \\\; 499 note 74 100 \\\; 503 note 60 0 \\\;
-542 note 74 0 \\\; \; 0 length 1039 \\\; 0 note 62 100 \\\; 63 note
-62 0 \\\; 113 note 62 100 \\\; 157 note 62 0 \\\; 225 note 62 100 \\\;
-257 note 62 0 \\\; 335 note 62 100 \\\; 348 note 62 0 \\\; 419 note
-62 100 \\\; 441 note 62 0 \\\; 508 note 62 100 \\\; 556 note 62 0 \\\;
-612 note 62 100 \\\; 644 note 62 0 \\\; 698 note 62 100 \\\; 741 note
-62 0 \\\; 801 note 62 100 \\\; 838 note 62 0 \\\; 905 note 62 100 \\\;
-920 note 62 0 \\\; 961 note 62 100 \\\; 1022 note 62 0 \\\; \; 0 length
-891 \\\; 0 note 76 100 \\\; 48 note 76 0 \\\; 109 note 60 100 \\\;
-199 note 64 100 \\\; 238 note 60 0 \\\; 293 note 64 0 \\\; 319 note
-74 100 \\\; 377 note 74 0 \\\; 380 note 64 100 \\\; 476 note 60 100
-\\\; 500 note 64 0 \\\; 578 note 72 100 \\\; 582 note 60 0 \\\; 626
-note 72 0 \\\; 659 note 64 100 \\\; 716 note 60 100 \\\; 763 note 64
-0 \\\; 800 note 74 100 \\\; 809 note 60 0 \\\; 849 note 74 0 \\\; \;
-20 \; 0 length 1500 \\\; 0 note 72 100 \\\; 119 note 72 0 \\\; 127
-note 69 100 \\\; 145 note 69 0 \\\; 180 note 64 100 \\\; 269 note 60
-100 \\\; 270 note 64 0 \\\; 364 note 64 100 \\\; 393 note 60 0 \\\;
-407 note 69 100 \\\; 416 note 64 0 \\\; 463 note 69 0 \\\; 691 note
-71 100 \\\; 742 note 71 0 \\\; 799 note 71 100 \\\; 838 note 71 0 \\\;
-910 note 62 100 \\\; 978 note 62 0 \\\; 1000 note 69 100 \\\; 1035
-note 69 0 \\\; 1160 note 60 100 \\\; 1300 note 62 100 \\\; 1319 note
-60 0 \\\; 1356 note 62 0 \\\; 1389 note 69 100 \\\; 1443 note 69 0
-\\\; \; 0 length 455 \\\; 0 note 77 100 \\\; 32 note 77 0 \\\; 104
-note 77 100 \\\; 140 note 77 0 \\\; 185 note 60 100 \\\; 254 note 64
-100 \\\; 278 note 60 0 \\\; 338 note 64 0 \\\; 346 note 74 100 \\\;
-377 note 74 0 \\\; \; 23 \; 0 length 567 \\\; 0 note 64 100 \\\; 38
-note 64 0 \\\; 98 note 64 100 \\\; 141 note 64 0 \\\; 196 note 64 100
-\\\; 242 note 64 0 \\\; 296 note 64 100 \\\; 336 note 64 0 \\\; 395
-note 64 100 \\\; 437 note 64 0 \\\; 491 note 64 100 \\\; 536 note 64
-0 \\\; \; 0 length 546 \\\; 0 note 81 100 \\\; 47 note 81 0 \\\; 87
-note 62 100 \\\; 169 note 77 100 \\\; 177 note 62 0 \\\; 189 note 77
-0 \\\; 289 note 60 100 \\\; 297 note 77 100 \\\; 317 note 77 0 \\\;
-397 note 64 100 \\\; 398 note 79 100 \\\; 411 note 64 0 \\\; 414 note
-60 0 \\\; 490 note 79 0 \\\; \; 26 \; 0 length 730 \\\; 0 note 81 100
-\\\; 76 note 77 100 \\\; 128 note 81 0 \\\; 162 note 74 100 \\\; 176
-note 77 0 \\\; 215 note 74 0 \\\; 232 note 64 100 \\\; 310 note 60
-100 \\\; 328 note 64 0 \\\; 360 note 65 100 \\\; 405 note 60 0 \\\;
-405 note 72 100 \\\; 440 note 65 0 \\\; 453 note 76 100 \\\; 459 note
-72 0 \\\; 529 note 77 100 \\\; 540 note 76 0 \\\; 561 note 72 100 \\\;
-596 note 77 0 \\\; 608 note 72 0 \\\; \; 0 length 740 \\\; 0 note 81
-100 \\\; 77 note 77 100 \\\; 129 note 81 0 \\\; 163 note 74 100 \\\;
-177 note 77 0 \\\; 216 note 74 0 \\\; 233 note 64 100 \\\; 311 note
-60 100 \\\; 329 note 64 0 \\\; 406 note 60 0 \\\; 406 note 72 100 \\\;
-460 note 72 0 \\\; 562 note 72 100 \\\; 609 note 72 0 \\\; \;;
+76 100 \\\; 755 note 76 0 \\\; \; 9 \; 0 length 399 \\\; 0 note 74
+100 \\\; 25 note 74 0 \\\; 32 note 71 100 \\\; 103 note 71 0 \\\; 129
+note 74 100 \\\; 159 note 71 100 \\\; 197 note 74 0 \\\; 210 note 64
+100 \\\; 238 note 71 0 \\\; 267 note 60 100 \\\; 286 note 64 0 \\\;
+312 note 60 0 \\\; \; 0 length 1483 \\\; 0 note 60 100 \\\; 88 note
+69 100 \\\; 127 note 60 0 \\\; 155 note 71 100 \\\; 155 note 69 0 \\\;
+228 note 74 100 \\\; 252 note 71 0 \\\; 285 note 77 100 \\\; 302 note
+74 0 \\\; 368 note 77 0 \\\; 375 note 69 100 \\\; 451 note 65 100 \\\;
+470 note 77 100 \\\; 479 note 69 0 \\\; 519 note 65 0 \\\; 545 note
+74 100 \\\; 586 note 77 0 \\\; 611 note 69 100 \\\; 641 note 71 100
+\\\; 655 note 74 0 \\\; 664 note 65 100 \\\; 677 note 71 0 \\\; 695
+note 69 0 \\\; 742 note 62 100 \\\; 804 note 65 0 \\\; 804 note 71
+100 \\\; 848 note 62 0 \\\; 875 note 71 0 \\\; 916 note 71 100 \\\;
+986 note 71 0 \\\; 990 note 69 100 \\\; 1037 note 65 100 \\\; 1069
+note 69 0 \\\; 1098 note 62 100 \\\; 1132 note 65 0 \\\; 1151 note
+71 100 \\\; 1156 note 62 0 \\\; 1211 note 71 0 \\\; 1217 note 69 100
+\\\; 1312 note 60 100 \\\; 1318 note 69 0 \\\; 1414 note 60 0 \\\;
+\; 0 length 1483 \\\; 0 note 60 100 \\\; 88 note 69 100 \\\; 127 note
+60 0 \\\; 155 note 71 100 \\\; 155 note 69 0 \\\; 228 note 74 100 \\\;
+252 note 71 0 \\\; 285 note 77 100 \\\; 302 note 74 0 \\\; 368 note
+77 0 \\\; 375 note 69 100 \\\; 451 note 65 100 \\\; 470 note 77 100
+\\\; 479 note 69 0 \\\; 519 note 65 0 \\\; 545 note 74 100 \\\; 586
+note 77 0 \\\; 611 note 69 100 \\\; 641 note 71 100 \\\; 655 note 74
+0 \\\; 664 note 65 100 \\\; 677 note 71 0 \\\; 695 note 69 0 \\\; 742
+note 62 100 \\\; 804 note 65 0 \\\; 804 note 71 100 \\\; 848 note 62
+0 \\\; 875 note 71 0 \\\; 916 note 71 100 \\\; 986 note 71 0 \\\; 990
+note 69 100 \\\; 1037 note 65 100 \\\; 1069 note 69 0 \\\; 1098 note
+62 100 \\\; 1132 note 65 0 \\\; 1151 note 71 100 \\\; 1156 note 62
+0 \\\; 1211 note 71 0 \\\; 1217 note 69 100 \\\; 1312 note 60 100 \\\;
+1318 note 69 0 \\\; 1414 note 60 0 \\\; \; 0 length 509 \\\; 0 note
+77 100 \\\; 19 note 71 100 \\\; 47 note 77 0 \\\; 112 note 71 0 \\\;
+119 note 65 100 \\\; 200 note 64 100 \\\; 226 note 65 0 \\\; 251 note
+60 100 \\\; 305 note 65 100 \\\; 317 note 64 0 \\\; 326 note 77 100
+\\\; 335 note 60 0 \\\; 368 note 74 100 \\\; 382 note 65 0 \\\; 386
+note 71 100 \\\; 488 note 74 0 \\\; 499 note 77 0 \\\; 501 note 71
+0 \\\; \; 0 length 509 \\\; 0 note 77 100 \\\; 19 note 71 100 \\\;
+47 note 77 0 \\\; 112 note 71 0 \\\; 119 note 65 100 \\\; 200 note
+64 100 \\\; 226 note 65 0 \\\; 251 note 60 100 \\\; 305 note 65 100
+\\\; 317 note 64 0 \\\; 326 note 77 100 \\\; 335 note 60 0 \\\; 368
+note 74 100 \\\; 382 note 65 0 \\\; 386 note 71 100 \\\; 488 note 74
+0 \\\; 499 note 77 0 \\\; 501 note 71 0 \\\; \; 15 \; 15 \; 0 length
+662 \\\; 0 note 74 100 \\\; 55 note 74 0 \\\; 146 note 60 100 \\\;
+238 note 60 0 \\\; 249 note 72 100 \\\; 289 note 72 0 \\\; 327 note
+64 100 \\\; 423 note 60 100 \\\; 436 note 64 0 \\\; 499 note 74 100
+\\\; 503 note 60 0 \\\; 542 note 74 0 \\\; \; 0 length 1039 \\\; 0
+note 62 100 \\\; 63 note 62 0 \\\; 113 note 62 100 \\\; 157 note 62
+0 \\\; 225 note 62 100 \\\; 257 note 62 0 \\\; 335 note 62 100 \\\;
+348 note 62 0 \\\; 419 note 62 100 \\\; 441 note 62 0 \\\; 508 note
+62 100 \\\; 556 note 62 0 \\\; 612 note 62 100 \\\; 644 note 62 0 \\\;
+698 note 62 100 \\\; 741 note 62 0 \\\; 801 note 62 100 \\\; 838 note
+62 0 \\\; 905 note 62 100 \\\; 920 note 62 0 \\\; 961 note 62 100 \\\;
+1022 note 62 0 \\\; \; 0 length 891 \\\; 0 note 76 100 \\\; 48 note
+76 0 \\\; 109 note 60 100 \\\; 199 note 64 100 \\\; 238 note 60 0 \\\;
+293 note 64 0 \\\; 319 note 74 100 \\\; 377 note 74 0 \\\; 380 note
+64 100 \\\; 476 note 60 100 \\\; 500 note 64 0 \\\; 578 note 72 100
+\\\; 582 note 60 0 \\\; 626 note 72 0 \\\; 659 note 64 100 \\\; 716
+note 60 100 \\\; 763 note 64 0 \\\; 800 note 74 100 \\\; 809 note 60
+0 \\\; 849 note 74 0 \\\; \; 20 \; 0 length 1500 \\\; 0 note 72 100
+\\\; 119 note 72 0 \\\; 127 note 69 100 \\\; 145 note 69 0 \\\; 180
+note 64 100 \\\; 269 note 60 100 \\\; 270 note 64 0 \\\; 364 note 64
+100 \\\; 393 note 60 0 \\\; 407 note 69 100 \\\; 416 note 64 0 \\\;
+463 note 69 0 \\\; 691 note 71 100 \\\; 742 note 71 0 \\\; 799 note
+71 100 \\\; 838 note 71 0 \\\; 910 note 62 100 \\\; 978 note 62 0 \\\;
+1000 note 69 100 \\\; 1035 note 69 0 \\\; 1160 note 60 100 \\\; 1300
+note 62 100 \\\; 1319 note 60 0 \\\; 1356 note 62 0 \\\; 1389 note
+69 100 \\\; 1443 note 69 0 \\\; \; 0 length 455 \\\; 0 note 77 100
+\\\; 32 note 77 0 \\\; 104 note 77 100 \\\; 140 note 77 0 \\\; 185
+note 60 100 \\\; 254 note 64 100 \\\; 278 note 60 0 \\\; 338 note 64
+0 \\\; 346 note 74 100 \\\; 377 note 74 0 \\\; \; 23 \; 0 length 567
+\\\; 0 note 64 100 \\\; 38 note 64 0 \\\; 98 note 64 100 \\\; 141 note
+64 0 \\\; 196 note 64 100 \\\; 242 note 64 0 \\\; 296 note 64 100 \\\;
+336 note 64 0 \\\; 395 note 64 100 \\\; 437 note 64 0 \\\; 491 note
+64 100 \\\; 536 note 64 0 \\\; \; 0 length 546 \\\; 0 note 81 100 \\\;
+47 note 81 0 \\\; 87 note 62 100 \\\; 169 note 77 100 \\\; 177 note
+62 0 \\\; 189 note 77 0 \\\; 289 note 60 100 \\\; 297 note 77 100 \\\;
+317 note 77 0 \\\; 397 note 64 100 \\\; 398 note 79 100 \\\; 411 note
+64 0 \\\; 414 note 60 0 \\\; 490 note 79 0 \\\; \; 26 \; 0 length 730
+\\\; 0 note 81 100 \\\; 76 note 77 100 \\\; 128 note 81 0 \\\; 162
+note 74 100 \\\; 176 note 77 0 \\\; 215 note 74 0 \\\; 232 note 64
+100 \\\; 310 note 60 100 \\\; 328 note 64 0 \\\; 360 note 65 100 \\\;
+405 note 60 0 \\\; 405 note 72 100 \\\; 440 note 65 0 \\\; 453 note
+76 100 \\\; 459 note 72 0 \\\; 529 note 77 100 \\\; 540 note 76 0 \\\;
+561 note 72 100 \\\; 596 note 77 0 \\\; 608 note 72 0 \\\; \; 0 length
+740 \\\; 0 note 81 100 \\\; 77 note 77 100 \\\; 129 note 81 0 \\\;
+163 note 74 100 \\\; 177 note 77 0 \\\; 216 note 74 0 \\\; 233 note
+64 100 \\\; 311 note 60 100 \\\; 329 note 64 0 \\\; 406 note 60 0 \\\;
+406 note 72 100 \\\; 460 note 72 0 \\\; 562 note 72 100 \\\; 609 note
+72 0 \\\; \;;
 #X obj 226 57 r \$0-write-current;
+#X obj 136 115 symbol \$1;
+#X obj 55 156 pack s s;
+#X obj 307 115 symbol \$1;
+#X obj 226 155 pack s s;
 #X connect 0 0 2 0;
-#X connect 1 0 11 0;
+#X connect 1 0 12 0;
 #X connect 2 0 1 0;
-#X connect 2 1 9 0;
-#X connect 3 0 8 0;
+#X connect 2 1 11 0;
+#X connect 3 0 14 0;
 #X connect 4 0 3 0;
-#X connect 4 1 6 0;
+#X connect 4 1 13 0;
 #X connect 5 0 4 0;
-#X connect 6 0 8 1;
-#X connect 7 0 13 0;
-#X connect 8 0 7 0;
-#X connect 9 0 11 1;
-#X connect 10 0 13 0;
-#X connect 11 0 10 0;
-#X connect 12 0 13 0;
-#X connect 14 0 4 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 10 0 4 0;
+#X connect 11 0 12 1;
+#X connect 12 0 7 0;
+#X connect 13 0 14 1;
+#X connect 14 0 6 0;
 #X restore 850 219 pd new-save-read-function;
 #X text 851 197 *** new change 1/27/2021;
-#X obj 517 361 t b b b;
-#X obj 556 385 s \$0-read-text;
-#X obj 1110 497 del 500;
+#X obj 610 386 s \$0-read-text;
 #X obj 65 534 s \$0-write-current;
 #X obj 65 479 t b b;
 #X obj 92 506 s \$0-save-current;
 #X obj 87 64 inlet, f 6;
 #X text 132 62 notes;
-#X obj 463 56 inlet;
-#X text 497 54 aux;
-#X obj 601 56 inlet;
-#X text 642 55 save and recall;
+#X obj 555 55 inlet;
 #X obj 859 72 inlet;
 #X text 903 70 beat-clock;
 #X obj 87 85 route notes;
 #X text 891 655 notes + events;
-#X connect 1 0 21 0;
+#N canvas 4 50 1024 582 messages 0;
+#X obj 20 19 inlet;
+#X obj 20 221 s seq3-\$1-init;
+#N canvas 109 134 1108 695 change-and-load-slot 0;
+#X obj 164 38 inlet;
+#X obj 164 526 sel 1, f 31;
+#X obj 543 308 s \$0-current-slot;
+#X obj 164 78 change -1;
+#X msg 347 585 0;
+#X text 556 288 change the slot number;
+#X obj 290 356 s \$0-read-current;
+#X text 330 336 open new slot;
+#X text 191 506 if playing \, play;
+#X obj 347 657 v seq3-\$1-state;
+#X obj 374 632 s seq3-\$1-actions;
+#X obj 347 610 t f f;
+#X obj 923 322 v seq3-\$1-state;
+#X obj 164 504 f;
+#X text 865 301 get the state before turning off;
+#X obj 164 172 t b b b f b b b, f 127;
+#X obj 670 267 s \$0-save-current;
+#X text 324 16 if a port is changed and a rec happens save \, if no
+change to .txt than dont save;
+#X obj 715 50 r seq3-\$1-actions;
+#X obj 670 219 spigot 0;
+#X msg 743 222 0;
+#X msg 715 139 1;
+#X obj 670 241 t b b;
+#X obj 164 641 s \$0-play-local;
+#X obj 191 601 v seq3-\$1-state;
+#X msg 191 574 1;
+#X obj 164 548 t b b;
+#X obj 796 244 s \$0-stop-local;
+#X obj 347 548 t b;
+#X obj 715 72 sel 3 5 6;
+#X obj 749 117 s \$0-save-current;
+#X obj 749 96 del 50;
+#X connect 0 0 3 0;
+#X connect 1 0 26 0;
+#X connect 1 1 28 0;
+#X connect 3 0 15 0;
+#X connect 4 0 11 0;
+#X connect 11 0 9 0;
+#X connect 11 1 10 0;
+#X connect 12 0 13 1;
+#X connect 13 0 1 0;
+#X connect 15 0 13 0;
+#X connect 15 1 6 0;
+#X connect 15 3 2 0;
+#X connect 15 4 19 0;
+#X connect 15 5 27 0;
+#X connect 15 6 12 0;
+#X connect 18 0 29 0;
+#X connect 19 0 22 0;
+#X connect 20 0 19 1;
+#X connect 21 0 19 1;
+#X connect 22 0 16 0;
+#X connect 22 1 20 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 0;
+#X connect 26 1 25 0;
+#X connect 28 0 4 0;
+#X connect 29 0 21 0;
+#X connect 29 1 21 0;
+#X connect 29 2 31 0;
+#X connect 31 0 30 0;
+#X restore 218 160 pd change-and-load-slot;
+#X obj 119 188 s seq3-\$1-save;
+#X obj 450 169 outlet;
+#X obj 20 39 route init save slot, f 50;
+#X text 514 165 to the states;
+#X connect 0 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 3 0;
+#X connect 5 2 2 0;
+#X connect 5 3 4 0;
+#X restore 555 89 pd messages;
+#X obj 517 340 r seq3-\$1-init;
+#X text 602 54 messages;
+#X obj 65 457 r seq3-\$1-save;
+#X text 452 272 arg 5: pass notes through? 0=false 1=true;
+#X msg 579 416 0 init \, 1 init;
+#X obj 517 361 t b b b b, f 16;
+#X text 674 417 initiate;
+#X connect 1 0 17 0;
 #X connect 1 1 2 0;
-#X connect 4 0 5 0;
-#X connect 10 0 46 0;
-#X connect 11 0 13 0;
-#X connect 14 0 19 0;
+#X connect 7 0 9 0;
+#X connect 10 0 15 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;
+#X connect 17 0 7 0;
+#X connect 17 1 3 0;
 #X connect 18 0 15 0;
-#X connect 19 0 15 0;
-#X connect 21 0 11 0;
-#X connect 21 1 3 0;
-#X connect 22 0 19 0;
-#X connect 26 0 27 0;
-#X connect 29 0 23 0;
-#X connect 30 0 23 1;
-#X connect 33 0 50 0;
-#X connect 35 0 36 0;
-#X connect 36 0 26 0;
-#X connect 36 1 20 0;
-#X connect 40 0 41 0;
-#X connect 42 0 48 0;
-#X connect 46 0 14 0;
-#X connect 46 1 18 0;
-#X connect 46 2 47 0;
-#X connect 48 0 40 0;
-#X connect 50 0 49 0;
-#X connect 50 1 51 0;
-#X connect 52 0 60 0;
-#X connect 54 0 0 0;
-#X connect 56 0 24 0;
-#X connect 58 0 34 0;
-#X connect 60 0 1 0;
-#X connect 60 1 13 0;
+#X connect 21 0 22 0;
+#X connect 24 0 19 0;
+#X connect 25 0 19 1;
+#X connect 29 0 30 0;
+#X connect 30 0 21 0;
+#X connect 30 1 16 0;
+#X connect 38 0 37 0;
+#X connect 38 1 39 0;
+#X connect 40 0 45 0;
+#X connect 42 0 47 0;
+#X connect 43 0 28 0;
+#X connect 45 0 1 0;
+#X connect 45 1 9 0;
+#X connect 47 0 0 0;
+#X connect 48 0 53 0;
+#X connect 50 0 38 0;
+#X connect 52 0 11 0;
+#X connect 53 0 10 0;
+#X connect 53 1 14 0;
+#X connect 53 2 52 0;
+#X connect 53 3 36 0;

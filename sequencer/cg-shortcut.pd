@@ -352,9 +352,6 @@
 #X obj 74 517 s oscOut;
 #X obj 489 217 == 0;
 #X obj 363 279 t a a;
-#X obj 1018 347 loadbang;
-#X msg 1018 368 0;
-#X obj 1018 395 s cgSc-\$1-mute-print;
 #N canvas 4 50 846 571 cancel-print-if-press-is-short 0;
 #X obj 152 82 inlet;
 #X obj 152 103 sel 0 1, f 65;
@@ -391,10 +388,10 @@
 #X connect 15 0 10 0;
 #X restore 74 191 pd cancel-print-if-press-is-short;
 #X obj 119 338 t b b;
-#X obj 118 396 s cgSc-\$1-rePrint;
+#X obj 119 398 s cgSc-\$1-rePrint;
 #X connect 0 0 44 0;
 #X connect 2 0 47 0;
-#X connect 2 1 55 0;
+#X connect 2 1 52 0;
 #X connect 3 0 34 0;
 #X connect 3 1 35 0;
 #X connect 3 2 31 0;
@@ -428,7 +425,7 @@
 #X connect 40 1 45 0;
 #X connect 41 0 42 0;
 #X connect 42 0 7 0;
-#X connect 44 0 54 0;
+#X connect 44 0 51 0;
 #X connect 44 1 11 1;
 #X connect 44 2 49 0;
 #X connect 44 3 12 0;
@@ -439,8 +436,6 @@
 #X connect 49 0 10 1;
 #X connect 50 0 3 0;
 #X connect 50 1 6 0;
-#X connect 51 0 52 0;
+#X connect 51 0 40 0;
 #X connect 52 0 53 0;
-#X connect 54 0 40 0;
-#X connect 55 0 56 0;
-#X connect 55 1 5 0;
+#X connect 52 1 5 0;
