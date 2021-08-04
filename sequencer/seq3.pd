@@ -1,5 +1,5 @@
 #N canvas 370 98 1237 849 10;
-#N canvas 4 50 1905 999 states 0;
+#N canvas 4 50 1904 1000 states 0;
 #X obj 136 11 inlet;
 #X msg 1346 13 stop;
 #X msg 1287 12 0;
@@ -249,7 +249,7 @@ toggle;
 #X connect 117 0 71 0;
 #X connect 123 0 69 0;
 #X connect 124 0 69 0;
-#X restore 555 130 pd states;
+#X restore 555 128 pd states;
 #X obj 87 146 t a a;
 #N canvas 9 50 1183 836 countem 0;
 #X obj 443 416 s seq3-\$1-count-notes;
@@ -279,7 +279,7 @@ toggle;
 #X connect 10 0 6 0;
 #X restore 114 171 pd countem;
 #X obj 114 269 s \$0-pass;
-#X text 619 133 state control;
+#X text 619 131 state control;
 #X text 206 170 count the incoming notes;
 #X text 128 254 incoming notes get passed to the outlet;
 #X obj 87 317 seq-format-event note;
@@ -1278,144 +1278,34 @@ or y);
 #X obj 55 94 t b b, f 14;
 #X obj 226 115 symbol \$3;
 #X obj 226 94 t b b, f 14;
-#X obj 355 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X msg 226 182 write \$1/bigtext\$2.txt;
 #X msg 55 177 read \$1/bigtext\$2.txt;
 #X msg 214 212 clear;
-#X obj 55 252 text define -k seq3-\$1-big-text;
-#A set 0 length 479 \\\; 0 note 71 100 \\\; 2 note 72 100 \\\; 26 note
-71 0 \\\; 73 note 72 0 \\\; 76 note 62 100 \\\; 128 note 60 100 \\\;
-144 note 62 0 \\\; 206 note 60 0 \\\; 225 note 62 100 \\\; 241 note
-67 100 \\\; 278 note 60 100 \\\; 281 note 62 0 \\\; 334 note 60 0 \\\;
-341 note 62 100 \\\; 358 note 69 100 \\\; 361 note 67 0 \\\; 380 note
-62 0 \\\; 421 note 69 0 \\\; \; 2 \; 3 \; 0 length 265 \\\; 0 note
-77 100 \\\; 114 note 74 100 \\\; 153 note 77 0 \\\; 228 note 74 0 \\\;
-249 note 67 100 \\\; 3 note 64 100 \\\; 39 note 67 0 \\\; 152 note
-60 100 \\\; 313 note 64 0 \\\; 339 note 60 0 \\\; 16 note 71 100 \\\;
-77 note 74 100 \\\; 182 note 71 0 \\\; 202 note 74 0 \\\; \; 0 length
-942 \\\; 0 note 72 100 \\\; 112 note 69 100 \\\; 121 note 72 0 \\\;
-170 note 69 0 \\\; 221 note 64 100 \\\; 333 note 60 100 \\\; 364 note
-64 0 \\\; 446 note 64 100 \\\; 485 note 60 0 \\\; 523 note 64 0 \\\;
-561 note 67 100 \\\; 677 note 67 0 \\\; 678 note 68 100 \\\; 800 note
-68 0 \\\; 809 note 69 100 \\\; 934 note 69 0 \\\; \; 6 \; 0 length
-870 \\\; 0 note 71 100 \\\; 96 note 69 100 \\\; 103 note 71 0 \\\;
-152 note 69 0 \\\; 191 note 64 100 \\\; 291 note 64 0 \\\; 307 note
-60 100 \\\; 400 note 67 100 \\\; 403 note 60 0 \\\; 441 note 67 0 \\\;
-507 note 64 100 \\\; 586 note 64 0 \\\; 710 note 76 100 \\\; 755 note
-76 0 \\\; \; 0 length 870 \\\; 0 note 71 100 \\\; 96 note 69 100 \\\;
-103 note 71 0 \\\; 152 note 69 0 \\\; 191 note 64 100 \\\; 291 note
-64 0 \\\; 307 note 60 100 \\\; 400 note 67 100 \\\; 403 note 60 0 \\\;
-441 note 67 0 \\\; 507 note 64 100 \\\; 586 note 64 0 \\\; 710 note
-76 100 \\\; 755 note 76 0 \\\; \; 9 \; 0 length 399 \\\; 0 note 74
-100 \\\; 25 note 74 0 \\\; 32 note 71 100 \\\; 103 note 71 0 \\\; 129
-note 74 100 \\\; 159 note 71 100 \\\; 197 note 74 0 \\\; 210 note 64
-100 \\\; 238 note 71 0 \\\; 267 note 60 100 \\\; 286 note 64 0 \\\;
-312 note 60 0 \\\; \; 0 length 1483 \\\; 0 note 60 100 \\\; 88 note
-69 100 \\\; 127 note 60 0 \\\; 155 note 71 100 \\\; 155 note 69 0 \\\;
-228 note 74 100 \\\; 252 note 71 0 \\\; 285 note 77 100 \\\; 302 note
-74 0 \\\; 368 note 77 0 \\\; 375 note 69 100 \\\; 451 note 65 100 \\\;
-470 note 77 100 \\\; 479 note 69 0 \\\; 519 note 65 0 \\\; 545 note
-74 100 \\\; 586 note 77 0 \\\; 611 note 69 100 \\\; 641 note 71 100
-\\\; 655 note 74 0 \\\; 664 note 65 100 \\\; 677 note 71 0 \\\; 695
-note 69 0 \\\; 742 note 62 100 \\\; 804 note 65 0 \\\; 804 note 71
-100 \\\; 848 note 62 0 \\\; 875 note 71 0 \\\; 916 note 71 100 \\\;
-986 note 71 0 \\\; 990 note 69 100 \\\; 1037 note 65 100 \\\; 1069
-note 69 0 \\\; 1098 note 62 100 \\\; 1132 note 65 0 \\\; 1151 note
-71 100 \\\; 1156 note 62 0 \\\; 1211 note 71 0 \\\; 1217 note 69 100
-\\\; 1312 note 60 100 \\\; 1318 note 69 0 \\\; 1414 note 60 0 \\\;
-\; 0 length 1483 \\\; 0 note 60 100 \\\; 88 note 69 100 \\\; 127 note
-60 0 \\\; 155 note 71 100 \\\; 155 note 69 0 \\\; 228 note 74 100 \\\;
-252 note 71 0 \\\; 285 note 77 100 \\\; 302 note 74 0 \\\; 368 note
-77 0 \\\; 375 note 69 100 \\\; 451 note 65 100 \\\; 470 note 77 100
-\\\; 479 note 69 0 \\\; 519 note 65 0 \\\; 545 note 74 100 \\\; 586
-note 77 0 \\\; 611 note 69 100 \\\; 641 note 71 100 \\\; 655 note 74
-0 \\\; 664 note 65 100 \\\; 677 note 71 0 \\\; 695 note 69 0 \\\; 742
-note 62 100 \\\; 804 note 65 0 \\\; 804 note 71 100 \\\; 848 note 62
-0 \\\; 875 note 71 0 \\\; 916 note 71 100 \\\; 986 note 71 0 \\\; 990
-note 69 100 \\\; 1037 note 65 100 \\\; 1069 note 69 0 \\\; 1098 note
-62 100 \\\; 1132 note 65 0 \\\; 1151 note 71 100 \\\; 1156 note 62
-0 \\\; 1211 note 71 0 \\\; 1217 note 69 100 \\\; 1312 note 60 100 \\\;
-1318 note 69 0 \\\; 1414 note 60 0 \\\; \; 0 length 509 \\\; 0 note
-77 100 \\\; 19 note 71 100 \\\; 47 note 77 0 \\\; 112 note 71 0 \\\;
-119 note 65 100 \\\; 200 note 64 100 \\\; 226 note 65 0 \\\; 251 note
-60 100 \\\; 305 note 65 100 \\\; 317 note 64 0 \\\; 326 note 77 100
-\\\; 335 note 60 0 \\\; 368 note 74 100 \\\; 382 note 65 0 \\\; 386
-note 71 100 \\\; 488 note 74 0 \\\; 499 note 77 0 \\\; 501 note 71
-0 \\\; \; 0 length 509 \\\; 0 note 77 100 \\\; 19 note 71 100 \\\;
-47 note 77 0 \\\; 112 note 71 0 \\\; 119 note 65 100 \\\; 200 note
-64 100 \\\; 226 note 65 0 \\\; 251 note 60 100 \\\; 305 note 65 100
-\\\; 317 note 64 0 \\\; 326 note 77 100 \\\; 335 note 60 0 \\\; 368
-note 74 100 \\\; 382 note 65 0 \\\; 386 note 71 100 \\\; 488 note 74
-0 \\\; 499 note 77 0 \\\; 501 note 71 0 \\\; \; 15 \; 15 \; 0 length
-662 \\\; 0 note 74 100 \\\; 55 note 74 0 \\\; 146 note 60 100 \\\;
-238 note 60 0 \\\; 249 note 72 100 \\\; 289 note 72 0 \\\; 327 note
-64 100 \\\; 423 note 60 100 \\\; 436 note 64 0 \\\; 499 note 74 100
-\\\; 503 note 60 0 \\\; 542 note 74 0 \\\; \; 0 length 1039 \\\; 0
-note 62 100 \\\; 63 note 62 0 \\\; 113 note 62 100 \\\; 157 note 62
-0 \\\; 225 note 62 100 \\\; 257 note 62 0 \\\; 335 note 62 100 \\\;
-348 note 62 0 \\\; 419 note 62 100 \\\; 441 note 62 0 \\\; 508 note
-62 100 \\\; 556 note 62 0 \\\; 612 note 62 100 \\\; 644 note 62 0 \\\;
-698 note 62 100 \\\; 741 note 62 0 \\\; 801 note 62 100 \\\; 838 note
-62 0 \\\; 905 note 62 100 \\\; 920 note 62 0 \\\; 961 note 62 100 \\\;
-1022 note 62 0 \\\; \; 0 length 891 \\\; 0 note 76 100 \\\; 48 note
-76 0 \\\; 109 note 60 100 \\\; 199 note 64 100 \\\; 238 note 60 0 \\\;
-293 note 64 0 \\\; 319 note 74 100 \\\; 377 note 74 0 \\\; 380 note
-64 100 \\\; 476 note 60 100 \\\; 500 note 64 0 \\\; 578 note 72 100
-\\\; 582 note 60 0 \\\; 626 note 72 0 \\\; 659 note 64 100 \\\; 716
-note 60 100 \\\; 763 note 64 0 \\\; 800 note 74 100 \\\; 809 note 60
-0 \\\; 849 note 74 0 \\\; \; 20 \; 0 length 1500 \\\; 0 note 72 100
-\\\; 119 note 72 0 \\\; 127 note 69 100 \\\; 145 note 69 0 \\\; 180
-note 64 100 \\\; 269 note 60 100 \\\; 270 note 64 0 \\\; 364 note 64
-100 \\\; 393 note 60 0 \\\; 407 note 69 100 \\\; 416 note 64 0 \\\;
-463 note 69 0 \\\; 691 note 71 100 \\\; 742 note 71 0 \\\; 799 note
-71 100 \\\; 838 note 71 0 \\\; 910 note 62 100 \\\; 978 note 62 0 \\\;
-1000 note 69 100 \\\; 1035 note 69 0 \\\; 1160 note 60 100 \\\; 1300
-note 62 100 \\\; 1319 note 60 0 \\\; 1356 note 62 0 \\\; 1389 note
-69 100 \\\; 1443 note 69 0 \\\; \; 0 length 455 \\\; 0 note 77 100
-\\\; 32 note 77 0 \\\; 104 note 77 100 \\\; 140 note 77 0 \\\; 185
-note 60 100 \\\; 254 note 64 100 \\\; 278 note 60 0 \\\; 338 note 64
-0 \\\; 346 note 74 100 \\\; 377 note 74 0 \\\; \; 23 \; 0 length 567
-\\\; 0 note 64 100 \\\; 38 note 64 0 \\\; 98 note 64 100 \\\; 141 note
-64 0 \\\; 196 note 64 100 \\\; 242 note 64 0 \\\; 296 note 64 100 \\\;
-336 note 64 0 \\\; 395 note 64 100 \\\; 437 note 64 0 \\\; 491 note
-64 100 \\\; 536 note 64 0 \\\; \; 0 length 546 \\\; 0 note 81 100 \\\;
-47 note 81 0 \\\; 87 note 62 100 \\\; 169 note 77 100 \\\; 177 note
-62 0 \\\; 189 note 77 0 \\\; 289 note 60 100 \\\; 297 note 77 100 \\\;
-317 note 77 0 \\\; 397 note 64 100 \\\; 398 note 79 100 \\\; 411 note
-64 0 \\\; 414 note 60 0 \\\; 490 note 79 0 \\\; \; 26 \; 0 length 730
-\\\; 0 note 81 100 \\\; 76 note 77 100 \\\; 128 note 81 0 \\\; 162
-note 74 100 \\\; 176 note 77 0 \\\; 215 note 74 0 \\\; 232 note 64
-100 \\\; 310 note 60 100 \\\; 328 note 64 0 \\\; 360 note 65 100 \\\;
-405 note 60 0 \\\; 405 note 72 100 \\\; 440 note 65 0 \\\; 453 note
-76 100 \\\; 459 note 72 0 \\\; 529 note 77 100 \\\; 540 note 76 0 \\\;
-561 note 72 100 \\\; 596 note 77 0 \\\; 608 note 72 0 \\\; \; 0 length
-740 \\\; 0 note 81 100 \\\; 77 note 77 100 \\\; 129 note 81 0 \\\;
-163 note 74 100 \\\; 177 note 77 0 \\\; 216 note 74 0 \\\; 233 note
-64 100 \\\; 311 note 60 100 \\\; 329 note 64 0 \\\; 406 note 60 0 \\\;
-406 note 72 100 \\\; 460 note 72 0 \\\; 562 note 72 100 \\\; 609 note
-72 0 \\\; \;;
-#X obj 226 57 r \$0-write-current;
 #X obj 136 115 symbol \$1;
 #X obj 55 156 pack s s;
 #X obj 307 115 symbol \$1;
 #X obj 226 155 pack s s;
+#X obj 226 27 r seq3-\$1-save;
+#X obj 398 97 s \$0-save-current;
+#X obj 226 48 t b b;
+#X obj 54 253 text define seq3-\$1-big-text;
 #X connect 0 0 2 0;
-#X connect 1 0 12 0;
+#X connect 1 0 9 0;
 #X connect 2 0 1 0;
-#X connect 2 1 11 0;
-#X connect 3 0 14 0;
+#X connect 2 1 8 0;
+#X connect 3 0 11 0;
 #X connect 4 0 3 0;
-#X connect 4 1 13 0;
-#X connect 5 0 4 0;
-#X connect 6 0 9 0;
-#X connect 7 0 9 0;
-#X connect 8 0 9 0;
-#X connect 10 0 4 0;
-#X connect 11 0 12 1;
-#X connect 12 0 7 0;
-#X connect 13 0 14 1;
-#X connect 14 0 6 0;
+#X connect 4 1 10 0;
+#X connect 5 0 15 0;
+#X connect 6 0 15 0;
+#X connect 7 0 15 0;
+#X connect 8 0 9 1;
+#X connect 9 0 6 0;
+#X connect 10 0 11 1;
+#X connect 11 0 5 0;
+#X connect 12 0 14 0;
+#X connect 14 0 4 0;
+#X connect 14 1 13 0;
 #X restore 850 219 pd new-save-read-function;
 #X text 851 197 *** new change 1/27/2021;
 #X obj 610 386 s \$0-read-text;
@@ -1433,22 +1323,18 @@ note 74 100 \\\; 176 note 77 0 \\\; 215 note 74 0 \\\; 232 note 64
 #X obj 20 19 inlet;
 #X obj 20 221 s seq3-\$1-init;
 #N canvas 109 134 1108 695 change-and-load-slot 0;
-#X obj 164 38 inlet;
-#X obj 164 526 sel 1, f 31;
-#X obj 543 308 s \$0-current-slot;
-#X obj 164 78 change -1;
-#X msg 347 585 0;
-#X text 556 288 change the slot number;
-#X obj 290 356 s \$0-read-current;
-#X text 330 336 open new slot;
-#X text 191 506 if playing \, play;
-#X obj 347 657 v seq3-\$1-state;
-#X obj 374 632 s seq3-\$1-actions;
-#X obj 347 610 t f f;
+#X obj 167 86 inlet;
+#X obj 290 496 sel 1, f 31;
+#X msg 473 555 0;
+#X obj 407 388 s \$0-read-current;
+#X text 447 368 open new slot;
+#X text 317 476 if playing \, play;
+#X obj 473 627 v seq3-\$1-state;
+#X obj 500 602 s seq3-\$1-actions;
+#X obj 473 580 t f f;
 #X obj 923 322 v seq3-\$1-state;
-#X obj 164 504 f;
+#X obj 290 474 f;
 #X text 865 301 get the state before turning off;
-#X obj 164 172 t b b b f b b b, f 127;
 #X obj 670 267 s \$0-save-current;
 #X text 324 16 if a port is changed and a rec happens save \, if no
 change to .txt than dont save;
@@ -1457,44 +1343,46 @@ change to .txt than dont save;
 #X msg 743 222 0;
 #X msg 715 139 1;
 #X obj 670 241 t b b;
-#X obj 164 641 s \$0-play-local;
-#X obj 191 601 v seq3-\$1-state;
-#X msg 191 574 1;
-#X obj 164 548 t b b;
+#X obj 290 611 s \$0-play-local;
+#X obj 317 571 v seq3-\$1-state;
+#X msg 317 544 1;
+#X obj 290 518 t b b;
 #X obj 796 244 s \$0-stop-local;
-#X obj 347 548 t b;
+#X obj 473 518 t b;
 #X obj 715 72 sel 3 5 6;
 #X obj 749 117 s \$0-save-current;
-#X obj 749 96 del 50;
-#X connect 0 0 3 0;
-#X connect 1 0 26 0;
-#X connect 1 1 28 0;
-#X connect 3 0 15 0;
-#X connect 4 0 11 0;
-#X connect 11 0 9 0;
-#X connect 11 1 10 0;
-#X connect 12 0 13 1;
-#X connect 13 0 1 0;
-#X connect 15 0 13 0;
-#X connect 15 1 6 0;
-#X connect 15 3 2 0;
-#X connect 15 4 19 0;
-#X connect 15 5 27 0;
-#X connect 15 6 12 0;
-#X connect 18 0 29 0;
-#X connect 19 0 22 0;
-#X connect 20 0 19 1;
-#X connect 21 0 19 1;
-#X connect 22 0 16 0;
-#X connect 22 1 20 0;
-#X connect 25 0 24 0;
-#X connect 26 0 23 0;
-#X connect 26 1 25 0;
-#X connect 28 0 4 0;
-#X connect 29 0 21 0;
-#X connect 29 1 21 0;
-#X connect 29 2 31 0;
-#X connect 31 0 30 0;
+#X obj 569 351 s \$0-current-slot;
+#X text 582 331 change the slot number;
+#X obj 165 172 t f b b f b b b, f 127;
+#X obj 749 96 del 1;
+#X connect 0 0 29 0;
+#X connect 1 0 22 0;
+#X connect 1 1 24 0;
+#X connect 2 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
+#X connect 9 0 10 1;
+#X connect 10 0 1 0;
+#X connect 14 0 25 0;
+#X connect 15 0 18 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 18 0 12 0;
+#X connect 18 1 16 0;
+#X connect 21 0 20 0;
+#X connect 22 0 19 0;
+#X connect 22 1 21 0;
+#X connect 24 0 2 0;
+#X connect 25 0 17 0;
+#X connect 25 1 17 0;
+#X connect 25 2 30 0;
+#X connect 29 1 10 0;
+#X connect 29 2 3 0;
+#X connect 29 3 27 0;
+#X connect 29 4 15 0;
+#X connect 29 5 23 0;
+#X connect 29 6 9 0;
+#X connect 30 0 26 0;
 #X restore 218 160 pd change-and-load-slot;
 #X obj 119 188 s seq3-\$1-save;
 #X obj 450 169 outlet;
